@@ -1,0 +1,92 @@
+{"id":"vdp_Local","type":"node","labels":["Model"],"properties":{"name":"vdp_Local","type":"block_diagram","extension":".slx","created_date":"Fri Aug 18 22:03:19 2000","creator":"The MathWorks, Inc.","modifiedBy":"20204920","modifiedDate":"Sun Oct 02 01:34:26 2022","modifiedComment":"","description":"The van der Pol Equation  This is a simulation of a nonlinear second order system.","startTime":"0.0","stopTime":"20","version":"10.3"}}
+{"id":"vdp_Local/Constant","type":"node","labels":["Block"],"properties":{"name":"Constant","type":"Constant","description":"Output the constant specified by the 'Constant value' parameter. If 'Constant value' is a vector and 'Interpret vector parameters as 1-D' is on, treat the constant value as a 1-D array. Otherwise, output a matrix with the same dimensions as the constant value.","numberOfInputPort":0,"numberOfOutputPort":1,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local"},"end":{"id":"vdp_Local/Constant"}}
+{"id":"vdp_Local/More Info","type":"node","labels":["SubSystem"],"properties":{"name":"More Info","type":"SubSystem","description":"Select the settings for the subsystem block. To enable parameters for code generation, select 'Treat as atomic unit'.","numberOfInputPort":0,"numberOfOutputPort":0,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local"},"end":{"id":"vdp_Local/More Info"}}
+{"id":"vdp_Local/More Info/Model Info","type":"node","labels":["SubSystem"],"properties":{"name":"Model Info","type":"SubSystem","description":"Select the settings for the subsystem block. To enable parameters for code generation, select 'Treat as atomic unit'.","numberOfInputPort":0,"numberOfOutputPort":0,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local/More Info"},"end":{"id":"vdp_Local/More Info/Model Info"}}
+{"id":"vdp_Local/Mu","type":"node","labels":["Block"],"properties":{"name":"Mu","type":"Gain","description":"Element-wise gain (y = K.*u) or matrix gain (y = K*u or y = u*K).","numberOfInputPort":1,"numberOfOutputPort":1,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local"},"end":{"id":"vdp_Local/Mu"}}
+{"id":"vdp_Local/Mux","type":"node","labels":["Block"],"properties":{"name":"Mux","type":"Mux","description":"Multiplex scalar or vector signals.","numberOfInputPort":2,"numberOfOutputPort":1,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local"},"end":{"id":"vdp_Local/Mux"}}
+{"id":"vdp_Local/Product","type":"node","labels":["Block"],"properties":{"name":"Product","type":"Product","description":"Multiply or divide inputs.  Choose element-wise or matrix product and specify one of the following:  a) * or / for each input port. For example, **/* performs the operation 'u1*u2/u3*u4'.  b) A scalar value specifies the number of input ports to be multiplied. For example, 2 performs the operation 'u1*u2'.  If there is only one input port and the Multiplication parameter is set to Element-wise(.*), a single * or / collapses the input signal using the specified operation. However, if the Multiplication parameter is set to Matrix(*), a single * causes the block to output the matrix unchanged, and a single / causes the block to output the matrix inverse.","numberOfInputPort":2,"numberOfOutputPort":1,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local"},"end":{"id":"vdp_Local/Product"}}
+{"id":"vdp_Local/Scope","type":"node","labels":["Block"],"properties":{"name":"Scope","type":"Scope","description":"Displays input signals with respect to simulation time","numberOfInputPort":1,"numberOfOutputPort":0,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local"},"end":{"id":"vdp_Local/Scope"}}
+{"id":"vdp_Local/Square","type":"node","labels":["Block"],"properties":{"name":"Square","type":"Math","description":"Mathematical functions including logarithmic, exponential, power, and modulus functions.  When the function has more than one argument, the first argument corresponds to the top (or left) input port.","numberOfInputPort":1,"numberOfOutputPort":1,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local"},"end":{"id":"vdp_Local/Square"}}
+{"id":"vdp_Local/Sum","type":"node","labels":["Block"],"properties":{"name":"Sum","type":"Sum","description":"Add or subtract inputs.  Specify one of the following: a) character vector containing + or - for each input port, | for spacer between ports (e.g. ++|-|++) b) scalar, >= 1, specifies the number of input ports to be summed.  When there is only one input port, add or subtract elements over all dimensions or one specified dimension  ","numberOfInputPort":2,"numberOfOutputPort":1,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local"},"end":{"id":"vdp_Local/Sum"}}
+{"id":"vdp_Local/Sum1","type":"node","labels":["Block"],"properties":{"name":"Sum1","type":"Sum","description":"Add or subtract inputs.  Specify one of the following: a) character vector containing + or - for each input port, | for spacer between ports (e.g. ++|-|++) b) scalar, >= 1, specifies the number of input ports to be summed.  When there is only one input port, add or subtract elements over all dimensions or one specified dimension  ","numberOfInputPort":2,"numberOfOutputPort":1,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local"},"end":{"id":"vdp_Local/Sum1"}}
+{"id":"vdp_Local/x1","type":"node","labels":["Block"],"properties":{"name":"x1","type":"Integrator","description":"Continuous-time integration of the input signal.","numberOfInputPort":1,"numberOfOutputPort":1,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local"},"end":{"id":"vdp_Local/x1"}}
+{"id":"vdp_Local/x2","type":"node","labels":["Block"],"properties":{"name":"x2","type":"Integrator","description":"Continuous-time integration of the input signal.","numberOfInputPort":1,"numberOfOutputPort":1,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local"},"end":{"id":"vdp_Local/x2"}}
+{"id":"vdp_Local/Out1","type":"node","labels":["Block"],"properties":{"name":"Out1","type":"Outport","description":"Provide an output port for a subsystem or model.  The 'Output when disabled' and 'Initial output' parameters only apply to conditionally executed subsystems. When a conditionally executed subsystem is disabled, the output is either held at its last value or set to the 'Initial output'.","numberOfInputPort":1,"numberOfOutputPort":0,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local"},"end":{"id":"vdp_Local/Out1"}}
+{"id":"vdp_Local/Out2","type":"node","labels":["Block"],"properties":{"name":"Out2","type":"Outport","description":"Provide an output port for a subsystem or model.  The 'Output when disabled' and 'Initial output' parameters only apply to conditionally executed subsystems. When a conditionally executed subsystem is disabled, the output is either held at its last value or set to the 'Initial output'.","numberOfInputPort":1,"numberOfOutputPort":0,"isCommented":"off","referenceModelName":"vdp_Local"}}
+{"id":"","type":"relationship","label":"CONTAINS","properties":{"type":"element"},"start":{"id":"vdp_Local"},"end":{"id":"vdp_Local/Out2"}}
+{"id":"vdp_Local/Constant/Outport1","type":"node","labels":["Port"],"properties":{"name":"Outport1","type":"outport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"outport"},"start":{"id":"vdp_Local/Constant"},"end":{"id":"vdp_Local/Constant/Outport1"}}
+{"id":"vdp_Local/Mu/Inport1","type":"node","labels":["Port"],"properties":{"name":"Inport1","type":"inport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/Mu"},"end":{"id":"vdp_Local/Mu/Inport1"}}
+{"id":"vdp_Local/Mu/Outport1","type":"node","labels":["Port"],"properties":{"name":"Outport1","type":"outport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"outport"},"start":{"id":"vdp_Local/Mu"},"end":{"id":"vdp_Local/Mu/Outport1"}}
+{"id":"vdp_Local/Mux/Inport1","type":"node","labels":["Port"],"properties":{"name":"Inport1","type":"inport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/Mux"},"end":{"id":"vdp_Local/Mux/Inport1"}}
+{"id":"vdp_Local/Mux/Inport2","type":"node","labels":["Port"],"properties":{"name":"Inport2","type":"inport","portNumber":2,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/Mux"},"end":{"id":"vdp_Local/Mux/Inport2"}}
+{"id":"vdp_Local/Mux/Outport1","type":"node","labels":["Port"],"properties":{"name":"Outport1","type":"outport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"outport"},"start":{"id":"vdp_Local/Mux"},"end":{"id":"vdp_Local/Mux/Outport1"}}
+{"id":"vdp_Local/Product/Inport1","type":"node","labels":["Port"],"properties":{"name":"Inport1","type":"inport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/Product"},"end":{"id":"vdp_Local/Product/Inport1"}}
+{"id":"vdp_Local/Product/Inport2","type":"node","labels":["Port"],"properties":{"name":"Inport2","type":"inport","portNumber":2,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/Product"},"end":{"id":"vdp_Local/Product/Inport2"}}
+{"id":"vdp_Local/Product/Outport1","type":"node","labels":["Port"],"properties":{"name":"Outport1","type":"outport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"outport"},"start":{"id":"vdp_Local/Product"},"end":{"id":"vdp_Local/Product/Outport1"}}
+{"id":"vdp_Local/Scope/Inport1","type":"node","labels":["Port"],"properties":{"name":"Inport1","type":"inport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/Scope"},"end":{"id":"vdp_Local/Scope/Inport1"}}
+{"id":"vdp_Local/Square/Inport1","type":"node","labels":["Port"],"properties":{"name":"Inport1","type":"inport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/Square"},"end":{"id":"vdp_Local/Square/Inport1"}}
+{"id":"vdp_Local/Square/Outport1","type":"node","labels":["Port"],"properties":{"name":"Outport1","type":"outport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"outport"},"start":{"id":"vdp_Local/Square"},"end":{"id":"vdp_Local/Square/Outport1"}}
+{"id":"vdp_Local/Sum/Inport1","type":"node","labels":["Port"],"properties":{"name":"Inport1","type":"inport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/Sum"},"end":{"id":"vdp_Local/Sum/Inport1"}}
+{"id":"vdp_Local/Sum/Inport2","type":"node","labels":["Port"],"properties":{"name":"Inport2","type":"inport","portNumber":2,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/Sum"},"end":{"id":"vdp_Local/Sum/Inport2"}}
+{"id":"vdp_Local/Sum/Outport1","type":"node","labels":["Port"],"properties":{"name":"Outport1","type":"outport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"outport"},"start":{"id":"vdp_Local/Sum"},"end":{"id":"vdp_Local/Sum/Outport1"}}
+{"id":"vdp_Local/Sum1/Inport1","type":"node","labels":["Port"],"properties":{"name":"Inport1","type":"inport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/Sum1"},"end":{"id":"vdp_Local/Sum1/Inport1"}}
+{"id":"vdp_Local/Sum1/Inport2","type":"node","labels":["Port"],"properties":{"name":"Inport2","type":"inport","portNumber":2,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/Sum1"},"end":{"id":"vdp_Local/Sum1/Inport2"}}
+{"id":"vdp_Local/Sum1/Outport1","type":"node","labels":["Port"],"properties":{"name":"Outport1","type":"outport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"outport"},"start":{"id":"vdp_Local/Sum1"},"end":{"id":"vdp_Local/Sum1/Outport1"}}
+{"id":"vdp_Local/x1/Inport1","type":"node","labels":["Port"],"properties":{"name":"Inport1","type":"inport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/x1"},"end":{"id":"vdp_Local/x1/Inport1"}}
+{"id":"vdp_Local/x1/Outport1","type":"node","labels":["Port"],"properties":{"name":"Outport1","type":"outport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"outport"},"start":{"id":"vdp_Local/x1"},"end":{"id":"vdp_Local/x1/Outport1"}}
+{"id":"vdp_Local/x2/Inport1","type":"node","labels":["Port"],"properties":{"name":"Inport1","type":"inport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/x2"},"end":{"id":"vdp_Local/x2/Inport1"}}
+{"id":"vdp_Local/x2/Outport1","type":"node","labels":["Port"],"properties":{"name":"Outport1","type":"outport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"outport"},"start":{"id":"vdp_Local/x2"},"end":{"id":"vdp_Local/x2/Outport1"}}
+{"id":"vdp_Local/Out1/Inport1","type":"node","labels":["Port"],"properties":{"name":"Inport1","type":"inport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/Out1"},"end":{"id":"vdp_Local/Out1/Inport1"}}
+{"id":"vdp_Local/Out2/Inport1","type":"node","labels":["Port"],"properties":{"name":"Inport1","type":"inport","portNumber":1,"dataType":"double"}}
+{"id":"","type":"relationship","label":"HAS_PORT","properties":{"type":"inport"},"start":{"id":"vdp_Local/Out2"},"end":{"id":"vdp_Local/Out2/Inport1"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"trunk","type":"line"},"start":{"id":"vdp_Local/Sum1/Outport1"},"end":{"id":"vdp_Local/Product/Inport1"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"trunk","type":"line"},"start":{"id":"vdp_Local/Constant/Outport1"},"end":{"id":"vdp_Local/Sum1/Inport1"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"trunk","type":"line"},"start":{"id":"vdp_Local/Square/Outport1"},"end":{"id":"vdp_Local/Sum1/Inport2"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"trunk","type":"line"},"start":{"id":"vdp_Local/Mu/Outport1"},"end":{"id":"vdp_Local/Sum/Inport2"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"trunk","type":"line"},"start":{"id":"vdp_Local/Product/Outport1"},"end":{"id":"vdp_Local/Mu/Inport1"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"trunk","type":"line"},"start":{"id":"vdp_Local/Mux/Outport1"},"end":{"id":"vdp_Local/Scope/Inport1"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"branch","type":"line"},"start":{"id":"vdp_Local/x1/Outport1"},"end":{"id":"vdp_Local/Sum/Inport1"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"branch","type":"line"},"start":{"id":"vdp_Local/x1/Outport1"},"end":{"id":"vdp_Local/Square/Inport1"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"branch","type":"line"},"start":{"id":"vdp_Local/x1/Outport1"},"end":{"id":"vdp_Local/Mux/Inport1"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"branch","type":"line"},"start":{"id":"vdp_Local/x1/Outport1"},"end":{"id":"vdp_Local/Out1/Inport1"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"branch","type":"line"},"start":{"id":"vdp_Local/x2/Outport1"},"end":{"id":"vdp_Local/x1/Inport1"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"branch","type":"line"},"start":{"id":"vdp_Local/x2/Outport1"},"end":{"id":"vdp_Local/Product/Inport2"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"branch","type":"line"},"start":{"id":"vdp_Local/x2/Outport1"},"end":{"id":"vdp_Local/Mux/Inport2"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"branch","type":"line"},"start":{"id":"vdp_Local/x2/Outport1"},"end":{"id":"vdp_Local/Out2/Inport1"}}
+{"id":"","type":"relationship","label":"SEND_DATA_TO","properties":{"segmentType":"trunk","type":"line"},"start":{"id":"vdp_Local/Sum/Outport1"},"end":{"id":"vdp_Local/x2/Inport1"}}

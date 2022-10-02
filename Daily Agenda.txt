@@ -1,0 +1,34 @@
+
+~~~~~ Today's Agenda (29th August) ~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Learn a little bit about SysML (System Modeling Language)
+2. Think about adding Port node in the metamodel for Simulink
+3. Think about SysML Metamodel
+4. Think about Rhapody model and Java Api to read the model information 
+
+
+------ Searching -------
+Analysis of Simulink Models Using Databases and Model Transformations
+Integrating SysML with simulation environments (Simulink) by model transformation approach
+
+
+
+Project development with Simulink and Rhapsody models
+Simple Project with Simulink and Rational Rhapsody models
+
+Select A multidisciplinary team-based project, following MDE methodology and involving models of different domains.
+cross-domain modeling/cross-domain model management
+The TURTLE robot of Tech United Eindhoven
+A robot is an example of such a multi-domain system.
+
+Multi-Domain Modeling and Co-Simulation Based on Modelica and Simulink
+Multi-domain Modeling and Simulation
+
+Multi-Domain Modeling and Co-Simulation
+
+Co-Modeling and Co-Simulation
+
+The OpenModelica Integrated Environment for Modeling, Simulation, and Model-Based Development
+
+
+

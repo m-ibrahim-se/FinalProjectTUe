@@ -1,0 +1,66 @@
+
+Email address of Agnes: a.k.m.v.d.reek@tue.nl
+
+Neo4j Information
+----------------------
+database name: neo4j
+pass: neo4j@123456
+
+Project:
+Project Name: ModelingInformationPlatform
+Database Name: MIP Neo4j DB
+Password: mipneo4jdb
+Version: 4.4.9 (latest)
+User: neo4j
+Connect to: bolt://localhost:7687
+Bolt Port: 7687
+Http Port: 7474
+Local host browser: http://localhost:7474/browser/
+
+Test Folder: C:\Users\20204920\.Neo4jDesktop\relate-data\dbmss\dbms-6f3e7c24-8f9d-4d3f-b0e9-6b9c59ee0d3d\python
+
+[10:29 AM] Muctadir, Hossain Muhammad
+https://neo4j.com/developer/neo4j-ogm/
+
+
+
+
+Ontology-based Domain Modelling for Consistent Content Change Management
+
+mathworks.com/products/simulink/getting-started.html
+
+github:
+m-ibrahim-se
+
+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
+
+------------- Search Help --------------
+Read Simulink model file and get blocks and their properties
+
+create and parse mdl file programatically
+Hi,
+
+I want to parse an mdl file to fetch the block data from and mdl file and store it in my application database. Similarly I have to create an mdl file from the data 
+within my application to open in the matlab.
+Are there any exposed C++/JAVA APIs from matlab-simulink to parse and/or create mdl file?
+Or is there any other way (using S Functions) to do the same thing?
+
+Thanks
+Kaushal
+
+---- Rational Rhapsody ----
+Model centric development in Rational Rhapsody
+
+----- SysML -----
+Generate a graph in Neo4j for all SysML elements (recursively) in the context of the System package.
+Generate Graph from SysML Model
+
+Simulink Parsers
+libraries in Java that apparently can parse simulink files
+How to parse xml file in python
+Simulink Library for Java 
+Reading an XML and Parsing as Class and Properties
+
+
+I would like to create a structure in Python which represents a Simulink model. I am aware of at least two ways of doing this - by parsing an ".mdl" file, or by using Matlab's api for communicating with the model.
+

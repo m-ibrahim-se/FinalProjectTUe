@@ -1,0 +1,8 @@
+__pycache__
+/src/docs
+/src/example.log
+/src/diagrams_viewer.py
+/src/gitlab/
+*.json
+/src/magicdraw/*.bak
+/src/*.log

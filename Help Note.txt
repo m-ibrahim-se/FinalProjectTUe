@@ -64,3 +64,4 @@ Reading an XML and Parsing as Class and Properties
 
 I would like to create a structure in Python which represents a Simulink model. I am aware of at least two ways of doing this - by parsing an ".mdl" file, or by using Matlab's api for communicating with the model.
 
+Eclipse code formatting: Go to Source | Format Document or press Ctrl+Shift+

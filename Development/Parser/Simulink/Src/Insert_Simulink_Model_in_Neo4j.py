@@ -15,16 +15,12 @@ import retrieve_Simulink_model as rSimModel
 def move_files(model_type=None):
     # Simulink
     current_dir_name = os.path.dirname(__file__)
-    # print(currentDirName)
     root_dir = os.path.abspath(os.path.join(current_dir_name, os.pardir))
-    # print(rootDir)
     parsed_data_file_path = os.path.join(root_dir, "ParsedDataFiles")
-    # print(parsedDataFilePath)
 
     # Copy files
     source_folder = parsed_data_file_path
     destination_folder = os.path.join(neo4jfileimportpath, simulinkfolder)
-    # print(destination_folder)
 
     # remove all files from destination path
     if os.path.exists(destination_folder):
@@ -55,7 +51,6 @@ def move_files(model_type=None):
 def insert_file_data(model_type=None, elementType=None):
     # Simulink
     import_folder = os.path.join(neo4jfileimportpath, simulinkfolder)
-    # print(import_folder)
 
     conn = neoQ.Neo4jConnection(neo4juri, neo4jusername, neo4jpassword)
 
@@ -63,12 +58,9 @@ def insert_file_data(model_type=None, elementType=None):
     for file_name in os.listdir(import_folder):
         # construct full file path
         sourcefile = os.path.join(import_folder, file_name)
-        # print('source file = ' + sourcefile)
         # Insert only files
         if os.path.isfile(sourcefile):
             file_path = simulinkfolder.replace("\\", "/")
-            # print("filePath:" + file_path)
-            # insert_query = "CALL apoc.import.json('file:///" + file_path + "/" + file_name + "')"
             if elementType == 'node':
                 insert_query = "CALL apoc.load.json('file:///" + file_path + "/" + file_name + "') YIELD value as records " \
                                                                                                "WHERE records.type = 'node' " \
@@ -82,8 +74,7 @@ def insert_file_data(model_type=None, elementType=None):
                                                                                                "MATCH (dst) " \
                                                                                                "WHERE dst.id = records.end.id " \
                                                                                                "CALL apoc.merge.relationship(src, records.label, records.properties, {}, dst, {}) YIELD rel return rel;"
-            # insert_query = "CALL apoc.import.json('file:///Simulink/ParsedDataFiles/" + file_name + "')"
-            print("Query String : " + insert_query)
+            # print("Query String : " + insert_query)
             query_result = conn.query(insert_query, db=neo4jdbname)
             # print(query_result)
             # [<Record file='file:///Simulink/ParsedDataFiles/ReachCoreach_Cover.json' source='file' format='json' nodes=91 relationships=120 properties=735 time=504 rows=211 batchSize=-1 batches=0 done=True data=None>]
@@ -97,14 +88,15 @@ def execute_query(query):
     given_query = query
     print("Query String : " + given_query)
     query_result = conn.query(given_query, db=neo4jdbname)
-    print(query_result)
+    # print(query_result)
+    print("Query executed successfully")
     conn.close()
 
 
 if __name__ == '__main__':
     # Generate data file(s)
     isDeleteGraphData = True
-    file_count = 5 #rSimModel.main_function()
+    file_count = rSimModel.main_function()
     if file_count > 0:
         print(file_count, " files generated to load")
         move_files('Simulink')

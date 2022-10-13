@@ -1,0 +1,3 @@
+{"Identifier":"com.telelogic.rhapsody.core.RPPackage@4591094a","MetaClass":"Package","OwnerOrParentIdentifier":"com.telelogic.rhapsody.core.RPProject@606caa2c","OwnerOrParent":"ADSimulation","Name":"Package_02"}
+{"Identifier":"com.telelogic.rhapsody.core.RPClass@37274fbf","MetaClass":"Class","OwnerOrParentIdentifier":"com.telelogic.rhapsody.core.RPPackage@4591094a","OwnerOrParent":"Package_02","Name":"block_001"}
+{"Identifier":"com.telelogic.rhapsody.core.RPObjectModelDiagram@490ad0b3","MetaClass":"ObjectModelDiagram","OwnerOrParentIdentifier":"com.telelogic.rhapsody.core.RPPackage@4591094a","OwnerOrParent":"Package_02","Name":"block definition diagram_001"}

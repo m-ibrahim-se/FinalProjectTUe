@@ -1,0 +1,3 @@
+MATLAB_ROOT=C:\Program Files\MATLAB\R2021a
+MultiInstanceCode=off
+sinIn Inport auto -1

@@ -1,0 +1,66 @@
+
+Reverse Engineering Done.
+
+Adding Event 'driveDCT()' to Package 'Usecases'. 
+Adding Event 'inputReceived()' to Package 'Usecases'. 
+Adding Package 'DefaultConfig' to Project 'Project'. 
+Source Artifacts have been added to the model to ensure that the generated code reflects details from the original code, such as global comments, preprocessor directives, and the order of elements. See the log file for more details.
+To view the Source Artifacts in the Rhapsody browser, open the View menu and select Browser Display Options > Show Source Artifacts.
+Source Artifacts were added for the following files:
+Adding File 'Charging:spec' to Package 'Charging'.
+Adding File 'CompareSOC:impl' to Package 'CompareSOC'.
+Adding File 'CompareSOC:spec' to Package 'CompareSOC'.
+Adding File 'Coupling:impl' to Package 'Coupling'.
+Adding File 'Coupling:spec' to Package 'Coupling'.
+Adding File 'DCLoadingEmployee:impl' to Actor 'DCLoadingEmployee'.
+Adding File 'DCLoadingEmployee:spec' to Actor 'DCLoadingEmployee'.
+Adding File 'DCLocalizationSystem:impl' to Class 'DCLocalizationSystem'.
+Adding File 'DCLocalizationSystem:spec' to Class 'DCLocalizationSystem'.
+Adding File 'DCLogisticEmployee:impl' to Actor 'DCLogisticEmployee'.
+Adding File 'DCLogisticEmployee:spec' to Actor 'DCLogisticEmployee'.
+Adding File 'DCT:impl' to Class 'DCT'.
+Adding File 'DCT:spec' to Class 'DCT'.
+Adding File 'EnvironmentSensors:impl' to Class 'EnvironmentSensors'.
+Adding File 'EnvironmentSensors:spec' to Class 'EnvironmentSensors'.
+Adding File 'HMI:spec' to Package 'HMI'.
+Adding File 'LoadingCargo:impl' to Package 'LoadingCargo'.
+Adding File 'LoadingCargo:spec' to Package 'LoadingCargo'.
+Adding File 'ManualHMI:impl' to Package 'ManualHMI'.
+Adding File 'ManualHMI:spec' to Package 'ManualHMI'.
+Adding File 'ManualOverride:impl' to Package 'ManualOverride'.
+Adding File 'ManualOverride:spec' to Package 'ManualOverride'.
+Adding File 'ObstacleDetection:impl' to Package 'ObstacleDetection'.
+Adding File 'ObstacleDetection:spec' to Package 'ObstacleDetection'.
+Adding File 'ParkingAssign:impl' to Package 'ParkingAssign'.
+Adding File 'ParkingAssign:spec' to Package 'ParkingAssign'.
+Adding File 'PathPlanning:impl' to Package 'PathPlanning'.
+Adding File 'PathPlanning:spec' to Package 'PathPlanning'.
+Adding File 'PrimaryActors:impl' to Package 'PrimaryActors'.
+Adding File 'PrimaryActors:spec' to Package 'PrimaryActors'.
+Adding File 'SecondaryActors:impl' to Package 'SecondaryActors'.
+Adding File 'SecondaryActors:spec' to Package 'SecondaryActors'.
+Adding File 'StopCrash:impl' to Package 'StopCrash'.
+Adding File 'StopCrash:spec' to Package 'StopCrash'.
+Adding File 'UC_Charging:impl' to Class 'UC_Charging'.
+Adding File 'UC_Charging:spec' to Class 'UC_Charging'.
+Adding File 'UC_CompareSOC:impl' to Class 'UC_CompareSOC'.
+Adding File 'UC_CompareSOC:spec' to Class 'UC_CompareSOC'.
+Adding File 'UC_Coupling:impl' to Class 'UC_Coupling'.
+Adding File 'UC_Coupling:spec' to Class 'UC_Coupling'.
+Adding File 'UC_Drive:impl' to Class 'UC_Drive'.
+Adding File 'UC_Drive:spec' to Class 'UC_Drive'.
+Adding File 'UC_HMI:impl' to Class 'UC_HMI'.
+Adding File 'UC_HMI:spec' to Class 'UC_HMI'.
+Adding File 'UC_LoadingCargo:impl' to Class 'UC_LoadingCargo'.
+Adding File 'UC_LoadingCargo:spec' to Class 'UC_LoadingCargo'.
+Adding File 'UC_ManualHMI:impl' to Class 'UC_ManualHMI'.
+Adding File 'UC_ManualHMI:spec' to Class 'UC_ManualHMI'.
+Adding File 'UC_ManualOverride:impl' to Class 'UC_ManualOverride'.
+Adding File 'UC_ManualOverride:spec' to Class 'UC_ManualOverride'.
+Adding File 'UC_ObstacleDetection:impl' to Class 'UC_ObstacleDetection'.
+Adding File 'UC_ObstacleDetection:spec' to Class 'UC_ObstacleDetection'.
+Adding File 'UC_ParkingAssign:impl' to Class 'UC_ParkingAssign'.
+Adding File 'UC_ParkingAssign:spec' to Class 'UC_ParkingAssign'.
+Adding File 'UC_PathPlanning:impl' to Class 'UC_PathPlanning'.
+Adding File 'UC_PathPlanning:spec' to Class 'UC_PathPlanning'.
+

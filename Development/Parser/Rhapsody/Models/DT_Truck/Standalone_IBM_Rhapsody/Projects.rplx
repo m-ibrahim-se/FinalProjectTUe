@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>100.840.0</version>
+	<lang>C++</lang>
+	<BuildNo>9841247</BuildNo>
+	
+	<RHAPSODY-MODEL>
+	<IWorkspace type="e">
+			<m_SavedActiveProjectsName type="a">test_5</m_SavedActiveProjectsName>
+			<_id type="a">GUID 66aefd7e-474b-463c-8822-4f180a58fb5e</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Projects</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2020::7:44:31</_modifiedTime>
+			<AggregatesList type="e">
+				<value>GUID 685a9f72-6564-4ad2-b344-804e36789f33</value>
+				<value>GUID 37943496-ae8c-4773-a092-18b217e1eaa2</value>
+			</AggregatesList>
+		</IWorkspace>
+		<IProject type="e">
+			<fileName type="a">Project</fileName>
+			<_persistAs type="a">D:\OneDrive\Studies\TUe\Year 1\Q4\4AT100\Model\New Model\IBM_4AT100_G8_V2-master</_persistAs>
+			<_id type="a">GUID 685a9f72-6564-4ad2-b344-804e36789f33</_id>
+		</IProject>
+		<IProject type="e">
+			<fileName type="a">test_5</fileName>
+			<_persistAs type="a">D:\OneDrive\Studies\TUe\Year 1\Q4\4AT100\Model\TruckLabSimulink_Pranav\TruckLabSimulink</_persistAs>
+			<_id type="a">GUID 37943496-ae8c-4773-a092-18b217e1eaa2</_id>
+		</IProject>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+			<size type="a">0</size>
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

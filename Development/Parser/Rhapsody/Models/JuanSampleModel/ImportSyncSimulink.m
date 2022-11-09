@@ -1,0 +1,3 @@
+addpath('C:\Program Files (x86)\IBM\Rhapsody\9.0\Share\etc');
+addpath('C:\Users\20204920\OneDrive - TU Eindhoven\PDEng\Projects\Final_Project\TUeProject\Development\Parser\Rhapsody\Models\SimulinkModel');
+SimulinkDataExtractor('C:\Users\20204920\OneDrive - TU Eindhoven\PDEng\Projects\Final_Project\TUeProject\Development\Parser\Rhapsody\Models\SimulinkModel\SineWaveDisplay.slx', 'C:\Users\20204920\OneDrive - TU Eindhoven\PDEng\Projects\Final_Project\TUeProject\Development\Parser\Rhapsody\Models\JuanSampleModel\SimDataFile.txt');

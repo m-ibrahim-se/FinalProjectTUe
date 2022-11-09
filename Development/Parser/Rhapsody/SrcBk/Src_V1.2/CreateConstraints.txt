@@ -1,0 +1,5 @@
+CREATE CONSTRAINT ON ( model:Model ) ASSERT (model.neo4jImportId) IS UNIQUE;
+CREATE CONSTRAINT ON ( block:Block ) ASSERT (block.neo4jImportId) IS UNIQUE;
+CREATE CONSTRAINT ON ( subsystem:SubSystem ) ASSERT (subsystem.neo4jImportId) IS UNIQUE;
+CREATE CONSTRAINT ON ( port:Port ) ASSERT (port.neo4jImportId) IS UNIQUE;
+CREATE CONSTRAINT ON ( referencemodel:ReferenceModel ) ASSERT (referencemodel.neo4jImportId) IS UNIQUE;

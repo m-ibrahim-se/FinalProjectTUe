@@ -1,0 +1,21 @@
+2020-06-14 14:34:38.487+02:00 DESKTOP-P5RKS9L CRRHP0010I Class DCLocalizationSystem in SystemContext::Actors::SecondaryActors relation itsUC_PathPlanning does not match its inverse. itsDCLocalizationSystem
+ Relation converted to unidirectional. 
+
+2020-06-14 14:35:15.276+02:00 DESKTOP-P5RKS9L CRRHP0010I Class DCLogisticEmployee in SystemContext::Actors::PrimaryActors relation itsUC_StopCrash does not match its inverse. itsDCLogisticEmployee
+ Relation converted to unidirectional. 
+
+2020-06-14 14:35:15.276+02:00 DESKTOP-P5RKS9L CRRHP0010I Class Sensors in SystemContext::Actors::SecondaryActors relation itsUC_StopCrash does not match its inverse. itsSensors
+ Relation converted to unidirectional. 
+
+2020-06-14 14:35:15.277+02:00 DESKTOP-P5RKS9L CRRHP0010I Class DCT in SystemContext::Actors::SecondaryActors relation itsUC_StopCrash does not match its inverse. itsDCT
+ Relation converted to unidirectional. 
+
+2020-06-14 14:35:29.976+02:00 DESKTOP-P5RKS9L CRRHP0010I Class DCT in SystemContext::Actors::SecondaryActors relation itsUC_Drive does not match its inverse. itsDCT
+ Relation converted to unidirectional. 
+
+2020-06-14 14:36:16.962+02:00 DESKTOP-P5RKS9L CRRHP0010I Class DCLogisticEmployee in SystemContext::Actors::PrimaryActors relation itsUC_ManualOverride does not match its inverse. itsDCLogisticEmployee
+ Relation converted to unidirectional. 
+
+2020-06-14 14:36:16.963+02:00 DESKTOP-P5RKS9L CRRHP0010I Class DCT in SystemContext::Actors::SecondaryActors relation itsUC_ManualOverride does not match its inverse. itsDCT
+ Relation converted to unidirectional. 
+

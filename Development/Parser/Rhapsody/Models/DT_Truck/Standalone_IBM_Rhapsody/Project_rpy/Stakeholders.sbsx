@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>100.840.0</version>
+	<lang>C++</lang>
+	<BuildNo>9841247</BuildNo>
+	
+	<RHAPSODY-MODEL>
+	<ISubsystem type="e">
+			<_id type="a">GUID 9417e0be-5f46-4e99-b69b-0463832b60f6</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Stakeholders</_name>
+			<_modifiedTimeWeak type="a">6.14.2020::12:36:46</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IDiagram</_hm2Class>
+					<_hname type="a">ModelStructure</_hname>
+					<_hid type="a">GUID 1712ed26-7d44-4aa1-88f5-65c69c511aab</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.14.2020::12:40:1</_modifiedTime>
+			<_lastID type="a">6</_lastID>
+			<weakCGTime type="a">6.14.2020::12:36:46</weakCGTime>
+			<strongCGTime type="a">6.14.2020::12:36:46</strongCGTime>
+			<_defaultComposite type="s">GUID efd556b0-78a0-44d5-a091-caf712d76a15</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID efd556b0-78a0-44d5-a091-caf712d76a15</value>
+				<value>GUID 91537b25-3418-495f-823d-52dc4edebd73</value>
+				<value>GUID 7f4deba0-6b85-4d69-8bef-f284d90b2325</value>
+				<value>GUID 98f33d7b-e53f-4531-81e0-49b3ba228087</value>
+				<value>GUID 6f79dab6-cb8d-4327-b2e1-35b1d0d5a815</value>
+				<value>GUID 1a805a42-45b6-4c73-9266-3d650da30654</value>
+				<value>GUID 662a6301-0970-42a5-87d5-0b514b4b402e</value>
+				<value>GUID 2aacb142-d1ed-450c-8f32-3a3ac6833880</value>
+				<value>GUID adfd6405-7ecb-4f59-a27c-4491f7086233</value>
+			</AggregatesList>
+		</ISubsystem>
+		<IClass type="e">
+			<_id type="a">GUID efd556b0-78a0-44d5-a091-caf712d76a15</_id>
+			<_myState type="a">40960</_myState>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">6.14.2020::12:36:46</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<weakCGTime type="a">6.14.2020::12:36:46</weakCGTime>
+			<strongCGTime type="a">6.14.2020::12:36:46</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		<IActor type="e">
+			<_id type="a">GUID 91537b25-3418-495f-823d-52dc4edebd73</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Government</_name>
+			<_modifiedTimeWeak type="a">6.14.2020::12:36:46</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.14.2020::8:39:43</_modifiedTime>
+			<weakCGTime type="a">6.14.2020::12:36:46</weakCGTime>
+			<strongCGTime type="a">6.14.2020::12:36:46</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IActor>
+		<IActor type="e">
+			<_id type="a">GUID 7f4deba0-6b85-4d69-8bef-f284d90b2325</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">DCOwner</_name>
+			<_modifiedTimeWeak type="a">6.14.2020::12:36:46</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.14.2020::8:39:43</_modifiedTime>
+			<weakCGTime type="a">6.14.2020::12:36:46</weakCGTime>
+			<strongCGTime type="a">6.14.2020::12:36:46</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IActor>
+		<IActor type="e">
+			<_id type="a">GUID 98f33d7b-e53f-4531-81e0-49b3ba228087</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">TruckManufacturers</_name>
+			<_modifiedTimeWeak type="a">6.14.2020::12:36:46</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.14.2020::8:39:43</_modifiedTime>
+			<weakCGTime type="a">6.14.2020::12:36:46</weakCGTime>
+			<strongCGTime type="a">6.14.2020::12:36:46</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IActor>
+		<IActor type="e">
+			<_id type="a">GUID 6f79dab6-cb8d-4327-b2e1-35b1d0d5a815</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Environmentalists</_name>
+			<_modifiedTimeWeak type="a">6.14.2020::12:36:46</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.14.2020::8:39:43</_modifiedTime>
+			<weakCGTime type="a">6.14.2020::12:36:46</weakCGTime>
+			<strongCGTime type="a">6.14.2020::12:36:46</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IActor>
+		<IActor type="e">
+			<_id type="a">GUID 1a805a42-45b6-4c73-9266-3d650da30654</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">TrafficRegulators</_name>
+			<_modifiedTimeWeak type="a">6.14.2020::12:36:46</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.14.2020::8:39:43</_modifiedTime>
+			<weakCGTime type="a">6.14.2020::12:36:46</weakCGTime>
+			<strongCGTime type="a">6.14.2020::12:36:46</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IActor>
+		<IActor type="e">
+			<_id type="a">GUID 662a6301-0970-42a5-87d5-0b514b4b402e</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">InsuranceCompanies</_name>
+			<_modifiedTimeWeak type="a">6.14.2020::12:36:46</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.14.2020::8:39:43</_modifiedTime>
+			<weakCGTime type="a">6.14.2020::12:36:46</weakCGTime>
+			<strongCGTime type="a">6.14.2020::12:36:46</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IActor>
+		<IActor type="e">
+			<_id type="a">GUID 2aacb142-d1ed-450c-8f32-3a3ac6833880</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">SensorManufacturers</_name>
+			<_modifiedTimeWeak type="a">6.14.2020::12:36:46</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.14.2020::8:39:43</_modifiedTime>
+			<weakCGTime type="a">6.14.2020::12:36:46</weakCGTime>
+			<strongCGTime type="a">6.14.2020::12:36:46</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IActor>
+		<IActor type="e">
+			<_id type="a">GUID adfd6405-7ecb-4f59-a27c-4491f7086233</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">AutomotiveSafetyStandards</_name>
+			<_modifiedTimeWeak type="a">6.14.2020::12:36:46</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.14.2020::8:39:43</_modifiedTime>
+			<weakCGTime type="a">6.14.2020::12:36:46</weakCGTime>
+			<strongCGTime type="a">6.14.2020::12:36:46</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IActor>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+			<size type="a">0</size>
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

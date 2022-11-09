@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>100.840.0</version>
+	<lang>C++</lang>
+	<BuildNo>9841247</BuildNo>
+	
+	<RHAPSODY-MODEL>
+	<ISubsystem type="e">
+			<_id type="a">GUID 1c238f57-135e-48fa-9b00-d8eb696fc1bb</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">UseCaseModelling</_name>
+			<_modifiedTimeWeak type="a">6.13.2020::8:47:1</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IDiagram</_hm2Class>
+					<_hname type="a">ModelStructure</_hname>
+					<_hid type="a">GUID 1712ed26-7d44-4aa1-88f5-65c69c511aab</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2020::19:19:15</_modifiedTime>
+			<_lastID type="a">20</_lastID>
+			<weakCGTime type="a">6.13.2020::8:47:1</weakCGTime>
+			<strongCGTime type="a">6.13.2020::8:47:1</strongCGTime>
+			<_defaultComposite type="s">GUID ce682e2c-521d-4467-a7a9-de296ece066c</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">6.9.2020::7:14:24</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 12f28ee7-77a3-4a4c-b200-3aedb2bcdd0d</value>
+				<value>GUID 9646b76a-e94e-457c-af8a-3c7b53288fce</value>
+				<value>GUID 6642bbdb-0588-4eb7-8d06-289239a56980</value>
+				<value>GUID 4d80cff2-6cb7-41ba-95bd-22eff01bdc72</value>
+				<value>GUID b5716069-4812-4a5e-ae51-5f538efd67ea</value>
+				<value>GUID 5517f4e2-adf3-4b4a-bea5-b803d393c1d9</value>
+				<value>GUID 6d2b4f74-6b22-48ad-b9af-fd5acfa10740</value>
+				<value>GUID 735292df-85e5-4339-89d0-a617ca287179</value>
+				<value>GUID 5b23fbe0-30ed-43f7-be7b-c29220497ba1</value>
+				<value>GUID 8e6a5e17-1816-446a-b109-09779497ea64</value>
+				<value>GUID 07b32de8-113a-49eb-a2c0-cc614bc1dc90</value>
+				<value>GUID 83537ed4-d4a4-46ff-bef9-6ef935dbff2d</value>
+				<value>GUID ce682e2c-521d-4467-a7a9-de296ece066c</value>
+			</AggregatesList>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">LoadingCargo</fileName>
+			<_id type="a">GUID 12f28ee7-77a3-4a4c-b200-3aedb2bcdd0d</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">ManualOverride</fileName>
+			<_id type="a">GUID 9646b76a-e94e-457c-af8a-3c7b53288fce</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">ParkingAssign</fileName>
+			<_id type="a">GUID 6642bbdb-0588-4eb7-8d06-289239a56980</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Charging</fileName>
+			<_id type="a">GUID 4d80cff2-6cb7-41ba-95bd-22eff01bdc72</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">CompareSOC</fileName>
+			<_id type="a">GUID b5716069-4812-4a5e-ae51-5f538efd67ea</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Coupling</fileName>
+			<_id type="a">GUID 5517f4e2-adf3-4b4a-bea5-b803d393c1d9</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Drive</fileName>
+			<_id type="a">GUID 6d2b4f74-6b22-48ad-b9af-fd5acfa10740</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">ManualHMI</fileName>
+			<_id type="a">GUID 735292df-85e5-4339-89d0-a617ca287179</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">HMI</fileName>
+			<_id type="a">GUID 5b23fbe0-30ed-43f7-be7b-c29220497ba1</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">ObstacleDetection</fileName>
+			<_id type="a">GUID 8e6a5e17-1816-446a-b109-09779497ea64</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">PathPlanning</fileName>
+			<_id type="a">GUID 07b32de8-113a-49eb-a2c0-cc614bc1dc90</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">StopCrash</fileName>
+			<_id type="a">GUID 83537ed4-d4a4-46ff-bef9-6ef935dbff2d</_id>
+		</ISubsystem>
+		<IClass type="e">
+			<_id type="a">GUID ce682e2c-521d-4467-a7a9-de296ece066c</_id>
+			<_myState type="a">40960</_myState>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+			<size type="a">0</size>
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

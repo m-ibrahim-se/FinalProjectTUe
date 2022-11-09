@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>100.840.0</version>
+	<lang>C++</lang>
+	<BuildNo>9841247</BuildNo>
+	
+	<RHAPSODY-MODEL>
+	<ISubsystem type="e">
+			<_id type="a">GUID f1c948b6-fa24-4817-96d4-66b0001a7ade</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Actors</_name>
+			<_modifiedTimeWeak type="a">6.14.2020::12:36:46</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IDiagram</_hm2Class>
+					<_hname type="a">ModelStructure</_hname>
+					<_hid type="a">GUID 1712ed26-7d44-4aa1-88f5-65c69c511aab</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.14.2020::12:40:1</_modifiedTime>
+			<_lastID type="a">18</_lastID>
+			<weakCGTime type="a">6.14.2020::12:36:46</weakCGTime>
+			<strongCGTime type="a">6.14.2020::12:36:46</strongCGTime>
+			<_defaultComposite type="s">GUID 46cf92bc-4a86-4bb9-8add-d2ef4a004744</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">6.2.2020::11:25:15</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 09ba3bbf-a46d-4c8a-b177-eb8f88d17528</value>
+				<value>GUID b77ce316-81d6-438b-ba1b-2fe215bcc256</value>
+				<value>GUID 46cf92bc-4a86-4bb9-8add-d2ef4a004744</value>
+			</AggregatesList>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">PrimaryActors</fileName>
+			<_id type="a">GUID 09ba3bbf-a46d-4c8a-b177-eb8f88d17528</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">SecondaryActors</fileName>
+			<_id type="a">GUID b77ce316-81d6-438b-ba1b-2fe215bcc256</_id>
+		</ISubsystem>
+		<IClass type="e">
+			<_id type="a">GUID 46cf92bc-4a86-4bb9-8add-d2ef4a004744</_id>
+			<_myState type="a">40960</_myState>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">6.14.2020::12:36:46</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<weakCGTime type="a">6.14.2020::12:36:46</weakCGTime>
+			<strongCGTime type="a">6.14.2020::12:36:46</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+			<size type="a">0</size>
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

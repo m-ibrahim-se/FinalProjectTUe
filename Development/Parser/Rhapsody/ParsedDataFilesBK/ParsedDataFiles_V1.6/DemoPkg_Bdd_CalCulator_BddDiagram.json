@@ -1,0 +1,4 @@
+{"id":"com.telelogic.rhapsody.core.RPObjectModelDiagram@5a7cfb34","type":"node","properties":{"ownerType":"Package","ownerName":"DemoPkg","name":"Bdd_CalCulator","description":"","genericType":"ObjectModelDiagram","type":"Block Definition Diagram","ownerIdentifier":"com.telelogic.rhapsody.core.RPPackage@fc12dfaa"},"labels":["BDDDiagram"]}
+{"start":{"id":"com.telelogic.rhapsody.core.RPPackage@fc12dfaa"},"end":{"id":"com.telelogic.rhapsody.core.RPObjectModelDiagram@5a7cfb34"},"id":"","label":"CONTAINS_DIAGRAM","type":"relationship","properties":{"type":"Block Definition Diagram"}}
+{"id":"com.telelogic.rhapsody.core.RPClass@30cf4d5e","type":"node","properties":{"name":"Calculator_Block","genericType":"Class","type":"Block"},"labels":["block"]}
+{"start":{"id":"com.telelogic.rhapsody.core.RPObjectModelDiagram@5a7cfb34"},"end":{"id":"com.telelogic.rhapsody.core.RPClass@30cf4d5e"},"id":"","label":"CONTAINS_BLOCK","type":"relationship","properties":{"type":"Block"}}

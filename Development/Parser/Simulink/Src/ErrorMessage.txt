@@ -1,0 +1,14 @@
+
+Error for not getting dataType:
+
+The identifier was: Simulink:Engine:CallbackEvalErr
+ There was an error in model compile! The message was: Error evaluating 'InitFcn' callback of block_diagram 'Cruise_Control_dsgn'. 
+Callback string is 'Cruise_Control_design'
+ The identifier was:Simulink:Engine:BdNotCompiled
+ There was an error in model termination! The message was: The model 'Cruise_Control_dsgn' must be compiled before it can be accessed programmatically.\n
+innerCriuse-Cruise_Control_dsgn.json file created successfully
+Total created files are =1
+
+--- ModelReferencing.slx ---
+When I execute matlab script from MATLAB directly then it is generating dataType for this model. But when I run it through python parser script then 
+dataType is not generating for this model.

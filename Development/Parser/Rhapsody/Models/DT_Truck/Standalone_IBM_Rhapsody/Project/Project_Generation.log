@@ -1,0 +1,67 @@
+RPE Engine version: 6.0.6.1
+Java version: 1.8.0_161
+Java vendor: IBM Corporation
+Java arch: x86
+Template path is D:\OneDrive\Studies\TUe\Year 1\Q4\4AT100\Model\New Model\IBM_4AT100_G8_V2-master\Project\GeneratedTemplate_projectdocument.dta
+Loading document template...
+
+Creating document specification for template D:\OneDrive\Studies\TUe\Year 1\Q4\4AT100\Model\New Model\IBM_4AT100_G8_V2-master\Project\GeneratedTemplate_projectdocument.dta
+Document specification model created
+Document generation started, please wait...
+
+Preparing docspec ...
+Starting run...
+Processing document template 1 of 1.
+Data source Rhapsody using URL http://localhost:27463/Rational/Rhapsody/?fields=Projects/(Project/(descriptionHTML%7CfullPathName%7CiconFileName%7Cid%7CuserDefinedMetaClass%7CviewName%7CActiveComponent/Component/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CDefaultPackage/Package/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CMainDiagram/AbstractDiagram/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CNestedElementsByViewOrder/(ModelElement/(descriptionHTML%7CdescriptionText%7CfullPathName%7CiconFileName%7Cid%7Cmultiplicity%7CuserDefinedMetaClass%7CviewName%7CMainBehavior/Statechart/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CMainDiagram/AbstractDiagram/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CNestedElementsByViewOrder/(ModelElement/(applicableMetaclasses%7CdescriptionHTML%7CdescriptionText%7CfullPathName%7CiconFileName%7Cid%7Cmultiplicity%7CuserDefinedMetaClass%7CviewName%7CContainedElements/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CDefaultPackage/Package/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CMainDiagram/AbstractDiagram/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CPictures/Picture/(path)%7CRedefines/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName))%7CReferences/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CRelations/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CStereotypes/(Stereotype/(id%7Cname%7COverridenProperties/Property/(key%7Cvalue)))%7CviewOwner/ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CMainBehavior/Statechart/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CNestedElementsByViewOrder/(ModelElement/(_ToElementTypes%7CapplicableMetaclasses%7Cdeclaration%7CdescriptionHTML%7CdescriptionText%7CelementMetaclasses%7CfromMetaclasses%7CfullPathName%7CiconFileName%7Cid%7Ckind%7Cmultiplicity%7CtypedefBaseType%7CtypedefMultiplicity%7CuserDefinedMetaClass%7CviewConcurrency%7CviewName%7CBase/(Classifier/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName))%7CDerived/(Classifier/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName))%7CMainBehavior/Statechart/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CMainDiagram/AbstractDiagram/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7COwner/(ModelElement/(id))%7CRedefines/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName))%7CReferences/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CRelations/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CStereotypes/(Stereotype/(id%7Cname%7COverridenProperties/Property/(key%7Cvalue)))%7CviewOwner/ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CNestedElementsByViewOrder/(ModelElement/(declaration%7CdescriptionHTML%7CdescriptionText%7CfullPathName%7CiconFileName%7Cid%7CinheritanceType%7Ckind%7Cmultiplicity%7CtagMetaclass%7CtypeDeclaration%7CtypeIsOnTheFly%7CtypedefBaseType%7CtypedefMultiplicity%7CuserDefinedMetaClass%7Cvalue%7CviewName%7Cvisibility%7CContainedElements/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CDefaultPackage/Package/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CMainDiagram/AbstractDiagram/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CPictures/Picture/(path)%7CRedefines/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName))%7CReferences/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CRelations/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CStereotypes/(Stereotype/(id%7Cname%7COverridenProperties/Property/(key%7Cvalue)))%7CviewOwner/ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CMainBehavior/Statechart/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CNestedElementsByViewOrder/(ModelElement/(descriptionHTML%7CdescriptionText%7CfullPathName%7CiconFileName%7Cid%7Cmultiplicity%7CtagMetaclass%7CtypeDeclaration%7CtypeIsOnTheFly%7CuserDefinedMetaClass%7Cvalue%7CviewName%7CBaseTag/Tag/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CMainDiagram/AbstractDiagram/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CNestedElementsByViewOrder/(ModelElement/(descriptionHTML%7CfullPathName%7CiconFileName%7Cid%7CuserDefinedMetaClass%7CviewName%7CMainDiagram/AbstractDiagram/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CRedefines/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName))%7CReferences/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CRelations/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CStereotypes/(Stereotype/(id%7Cname%7COverridenProperties/Property/(key%7Cvalue)))%7CviewOwner/ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)))%7CRedefines/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName))%7CReferences/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CRelations/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CStereotypes/(Stereotype/(id%7Cname%7COverridenProperties/Property/(key%7Cvalue)))%7CType/Classifier/(iconFileName%7Cid%7CuserDefinedMetaClass%7CviewName%7COwner/ModelElement)%7CValueSpecifications/(ValueSpecification/modelElementValue/ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName))%7CviewOwner/ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)))%7COwner/(ModelElement/(id))%7CDependent/ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CDependsOn/ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CBaseTag/Tag/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CType/Classifier/(iconFileName%7Cid%7CuserDefinedMetaClass%7CviewName%7COwner/ModelElement)%7CValueSpecifications/(ValueSpecification/modelElementValue/ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName))))%7CDependent/ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)%7CDependsOn/ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)))%7COwner/(ModelElement/(id))))%7COwner/(ModelElement/(id))%7CRedefines/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName))%7CReferences/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CRelations/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CStereotypes/(Stereotype/(id%7Cname%7COverridenProperties/Property/(key%7Cvalue)))%7CviewOwner/ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)))%7COwner/(ModelElement/(id))%7CRedefines/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName))%7CReferences/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CRelations/(ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName%7CviewOwner/ModelElement/(fullPathName%7Cid%7CremoteURI)))%7CStereotypes/(Stereotype/(id%7Cname%7COverridenProperties/Property/(key%7Cvalue)))%7CviewOwner/ModelElement/(iconFileName%7Cid%7CremoteURI%7CuserDefinedMetaClass%7CviewName)))
+Processed 200 input elements.
+1500 publishing commands are processed. 3379 publishing commands remain to be processed.
+Processed 400 input elements.
+Processed 600 input elements.
+3000 publishing commands are processed. 10256 publishing commands remain to be processed.
+4500 publishing commands are processed. 10003 publishing commands remain to be processed.
+Processed 800 input elements.
+6000 publishing commands are processed. 10214 publishing commands remain to be processed.
+7500 publishing commands are processed. 10528 publishing commands remain to be processed.
+Processed 1000 input elements.
+Processed 1200 input elements.
+9000 publishing commands are processed. 18215 publishing commands remain to be processed.
+Processed 1400 input elements.
+10500 publishing commands are processed. 18318 publishing commands remain to be processed.
+Processed 1600 input elements.
+12000 publishing commands are processed. 19859 publishing commands remain to be processed.
+13500 publishing commands are processed. 19444 publishing commands remain to be processed.
+15000 publishing commands are processed. 17944 publishing commands remain to be processed.
+16500 publishing commands are processed. 16444 publishing commands remain to be processed.
+18000 publishing commands are processed. 14944 publishing commands remain to be processed.
+19500 publishing commands are processed. 13444 publishing commands remain to be processed.
+21000 publishing commands are processed. 11944 publishing commands remain to be processed.
+22500 publishing commands are processed. 10444 publishing commands remain to be processed.
+Processed 1800 input elements.
+24000 publishing commands are processed. 11683 publishing commands remain to be processed.
+25500 publishing commands are processed. 11751 publishing commands remain to be processed.
+Processed 2000 input elements.
+27000 publishing commands are processed. 12320 publishing commands remain to be processed.
+28500 publishing commands are processed. 12510 publishing commands remain to be processed.
+30000 publishing commands are processed. 12138 publishing commands remain to be processed.
+Processed 2200 input elements.
+31500 publishing commands are processed. 12665 publishing commands remain to be processed.
+33000 publishing commands are processed. 11918 publishing commands remain to be processed.
+34500 publishing commands are processed. 12161 publishing commands remain to be processed.
+36000 publishing commands are processed. 11061 publishing commands remain to be processed.
+37500 publishing commands are processed. 9581 publishing commands remain to be processed.
+39000 publishing commands are processed. 8109 publishing commands remain to be processed.
+40500 publishing commands are processed. 6609 publishing commands remain to be processed.
+42000 publishing commands are processed. 5109 publishing commands remain to be processed.
+43500 publishing commands are processed. 3609 publishing commands remain to be processed.
+45000 publishing commands are processed. 2109 publishing commands remain to be processed.
+46500 publishing commands are processed. 609 publishing commands remain to be processed.
+47110 publishing commands are processed. 0 publishing commands remain to be processed.
+Total number of input elements processed: 2342
+Total data request time: 12.741 seconds
+Finalizing document generation. Writing output files...
+Document generation finished in 59 seconds. 
+Engine execution finished succesfully. The results are:
+	Html: D:\OneDrive\Studies\TUe\Year 1\Q4\4AT100\Model\New Model\IBM_4AT100_G8_V2-master\Project\Project.html
+Document was generated successfully to D:\OneDrive\Studies\TUe\Year 1\Q4\4AT100\Model\New Model\IBM_4AT100_G8_V2-master\Project\Project.html
+Done.
+

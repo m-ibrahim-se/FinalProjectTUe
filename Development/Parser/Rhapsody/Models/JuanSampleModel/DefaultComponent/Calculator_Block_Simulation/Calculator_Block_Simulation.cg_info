@@ -1,0 +1,40 @@
+I-Logix-RPY-Archive version 8.15.0 * 202002261110
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 4;
+	- value = "DefaultComponent\\Calculator_Block_Simulation\\Calculator_Block.cpp" 10.18.2022::23:22:58
+	"DefaultComponent\\Calculator_Block_Simulation\\Calculator_Block.h" 10.18.2022::23:22:58
+	"DefaultComponent\\Calculator_Block_Simulation\\DemoPkg.cpp" 10.18.2022::23:22:58
+	"DefaultComponent\\Calculator_Block_Simulation\\DemoPkg.h" 10.18.2022::23:22:58
+	
+}
+- m_saveUnitAndOwnerSaveUnit = { IRPYRawContainer 
+	- size = 2;
+	- value = "GUID d8109b4d-96de-453a-8476-b8af2513002b" "GUID ae64dc06-6b2f-4a3e-9aa6-e2b7b8ee1e5e"
+	"GUID eceb40e7-1461-4c8b-91f7-f069a6421bc1" "GUID ae64dc06-6b2f-4a3e-9aa6-e2b7b8ee1e5e"
+	
+}
+- size = 3;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = ".\\..\\..\\JuanSampleModel_rpy\\DemoPkg.sbsx";
+	- _name = "DemoPkg";
+	- _id = GUID eceb40e7-1461-4c8b-91f7-f069a6421bc1;
+}
+- genTime = 10.18.2022::23:22:58;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\JuanSampleModel_rpy\\DemoPkg.sbsx";
+	- _subsystem = "DemoPkg";
+	- _name = "Calculator_Block";
+	- _id = GUID 445eecd2-6aae-4337-a6ee-02ae696de03d;
+}
+- genTime = 10.18.2022::23:22:58;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = ".\\..\\..\\JuanSampleModel_rpy\\DefaultComponent.cmpx";
+	- _name = "DefaultComponent\\Calculator_Block_Simulation";
+	- _id = GUID 7f76687b-9d2b-4496-b7c1-1761cc374bac;
+}
+- genTime = 10.18.2022::23:22:58;
+

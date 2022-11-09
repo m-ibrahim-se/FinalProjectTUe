@@ -97,7 +97,7 @@ if __name__ == '__main__':
     # Generate data file(s)
     isDeleteGraphData = True
     file_count = rSimModel.main_function()
-    if file_count > 0:
+    if file_count > 20:
         print(file_count, " files generated to load")
         move_files('Simulink')
         if isDeleteGraphData:

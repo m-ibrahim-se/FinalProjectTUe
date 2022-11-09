@@ -1,0 +1,67 @@
+I-Logix-RPY-Archive version 8.13.0 * 9794446
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 8;
+	- value = "DefaultComponent\\DefaultConfig\\Car.cpp" 4.10.2019::14:40:4
+	"DefaultComponent\\DefaultConfig\\Car.h" 4.10.2019::14:40:4
+	"DefaultComponent\\DefaultConfig\\CarStructure.cpp" 4.10.2019::14:40:4
+	"DefaultComponent\\DefaultConfig\\CarStructure.h" 4.10.2019::14:40:4
+	"DefaultComponent\\DefaultConfig\\Engine.cpp" 4.10.2019::14:40:4
+	"DefaultComponent\\DefaultConfig\\Engine.h" 4.10.2019::14:40:4
+	"DefaultComponent\\DefaultConfig\\STRUCTURE.cpp" 4.10.2019::14:40:4
+	"DefaultComponent\\DefaultConfig\\STRUCTURE.h" 4.10.2019::14:40:4
+	
+}
+- m_saveUnitAndOwnerSaveUnit = { IRPYRawContainer 
+	- size = 2;
+	- value = "GUID 41375d05-3ae3-4d4e-b2f2-c8052912b0ff" "GUID 42ba9963-9f10-4386-9c16-c75768f9ebc9"
+	"GUID 4c8e40d9-deed-45db-8a4a-a47533941cdf" "GUID 42ba9963-9f10-4386-9c16-c75768f9ebc9"
+	
+}
+- size = 5;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "STRUCTURE.sbs";
+	- _subsystem = "STRUCTURE";
+	- _class = "";
+	- _name = "Car";
+	- _id = GUID bbe85afb-3c71-4f4b-82dc-a235ee2d729d;
+}
+- genTime = 4.10.2019::14:40:4;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "STRUCTURE.sbs";
+	- _subsystem = "STRUCTURE";
+	- _class = "";
+	- _name = "CarStructure";
+	- _id = GUID 473f86f3-a594-422c-8ca9-9fae66932374;
+}
+- genTime = 4.10.2019::14:40:4;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = "DefaultComponent.cmp";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "DefaultComponent\\DefaultConfig";
+	- _id = GUID f2c2bb57-ebbc-4781-b6aa-b3ce1a935b20;
+}
+- genTime = 4.10.2019::14:40:4;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "STRUCTURE.sbs";
+	- _subsystem = "STRUCTURE";
+	- _class = "";
+	- _name = "Engine";
+	- _id = GUID d20d9096-e88b-4441-8de7-01b1f8e4b20c;
+}
+- genTime = 4.10.2019::14:40:4;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = "STRUCTURE.sbs";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "STRUCTURE";
+	- _id = GUID 4c8e40d9-deed-45db-8a4a-a47533941cdf;
+}
+- genTime = 4.10.2019::14:40:4;
+

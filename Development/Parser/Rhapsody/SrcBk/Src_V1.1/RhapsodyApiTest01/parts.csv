@@ -1,0 +1,9 @@
+itsObstacles,Environment
+itsMotor,PowertrainSystem
+itsBattery_1,PowertrainSystem
+itsActuators_1,Truck
+itsSteering,Truck
+itsPowertrainSystem,Truck
+itsTruck_Sensors_1,Truck
+itsEngine,Car
+itsCarStructure,Car

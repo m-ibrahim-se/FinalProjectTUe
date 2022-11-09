@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>109.0</version>
+	<lang>C++</lang>
+	<BuildNo>202002261110</BuildNo>
+	<RMMMinimumClientVersion>100.0</RMMMinimumClientVersion>
+	
+	<RHAPSODY-MODEL>
+	<IComponent type="e">
+			<_id type="a">GUID 3c530a05-ab16-40b9-b9a2-5056b2c10b6a</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">TheSystemComp</_name>
+			<_modifiedTimeWeak type="a">10.31.2022::13:26:41</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.31.2022::13:26:41</_modifiedTime>
+			<m_buildType type="a">Executable</m_buildType>
+			<m_configActive type="r">
+				<ICodeGenConfigInfoHandle type="e">
+					<_hm2Class type="a">ICodeGenConfigInfo</_hm2Class>
+					<_hid type="a">GUID bc0fe0ec-c818-4a7b-93b7-6d750260076b</_hid>
+				</ICodeGenConfigInfoHandle>
+			</m_configActive>
+			<VariationPoints type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</VariationPoints>
+			<SelectedVariants type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</SelectedVariants>
+			<weakCGTime type="a">10.31.2022::13:26:41</weakCGTime>
+			<strongCGTime type="a">10.31.2022::13:26:41</strongCGTime>
+			<AggregatesList type="e">
+				<value>GUID 73e47018-c10a-44b4-9f15-8b8d12adec04</value>
+				<value>GUID bc0fe0ec-c818-4a7b-93b7-6d750260076b</value>
+			</AggregatesList>
+		</IComponent>
+		<IFolder type="e">
+			<_id type="a">GUID 73e47018-c10a-44b4-9f15-8b8d12adec04</_id>
+			<_myState type="a">73728</_myState>
+			<_rmmServerID type="a">-1</_rmmServerID>
+			<_name type="a">Files</_name>
+			<_modifiedTimeWeak type="a">10.31.2022::13:26:41</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.31.2022::13:26:41</_modifiedTime>
+			<Elements type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hfilename type="a">.\InterConnection.sbsx</_hfilename>
+							<_hname type="a">InterConnection</_hname>
+							<_hid type="a">GUID 87f796df-aa8d-4428-b6b8-6617c7cb0e4b</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+						</IHandle>
+					
+					
+						<IHandle type="e">
+						</IHandle>
+					
+					
+						<IHandle type="e">
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Elements>
+			<Files type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Files>
+			<PackagesWithoutAggregates type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hfilename type="a">.\InterConnection.sbsx</_hfilename>
+							<_hname type="a">InterConnection</_hname>
+							<_hid type="a">GUID 87f796df-aa8d-4428-b6b8-6617c7cb0e4b</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</PackagesWithoutAggregates>
+		</IFolder>
+		<ICodeGenConfigInfo type="e">
+			<_id type="a">GUID bc0fe0ec-c818-4a7b-93b7-6d750260076b</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">-1</_rmmServerID>
+			<_name type="a">Simulink</_name>
+			<_modifiedTimeWeak type="a">10.31.2022::13:20:56</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.31.2022::13:20:56</_modifiedTime>
+			<_lastID type="a">2</_lastID>
+			<_scopeType type="a">Explicit</_scopeType>
+			<_instrumentation type="a">None</_instrumentation>
+			<_timeModel type="a">RealTime</_timeModel>
+			<m_generateActors type="a">1</m_generateActors>
+			<_statechartImplementation type="a">Flat</_statechartImplementation>
+			<_checksList type="a">0 ,</_checksList>
+			<_checksList_Default type="a">1</_checksList_Default>
+			<ScopeElements type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</ScopeElements>
+			<InitialInstances type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</InitialInstances>
+			<weakCGTime type="a">10.31.2022::13:20:56</weakCGTime>
+			<strongCGTime type="a">10.31.2022::13:20:56</strongCGTime>
+			<AnimScopeElements type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</AnimScopeElements>
+			<m_allInAnimScope type="a">1</m_allInAnimScope>
+			<m_generateUsecases type="a">0</m_generateUsecases>
+			<AggregatesList type="e">
+				<value>GUID a03160d7-f160-43c9-80cb-0732119a81bf</value>
+				<value>GUID 88168e3a-b1b6-430d-bf4e-336647b149fb</value>
+				<value>GUID 63740807-85ea-44fc-b775-ca86bb61385f</value>
+			</AggregatesList>
+		</ICodeGenConfigInfo>
+		<IDependency type="e">
+			<_id type="a">GUID a03160d7-f160-43c9-80cb-0732119a81bf</_id>
+			<_myState type="a">2048</_myState>
+			<_rmmServerID type="a">-1</_rmmServerID>
+			<_name type="a">Driver</_name>
+			<_modifiedTimeWeak type="a">10.31.2022::12:49:31</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.31.2022::13:20:56</_modifiedTime>
+			<_dependsOn type="r">
+				<INObjectHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hfilename type="a">.\InterConnection.sbsx</_hfilename>
+					<_hsubsystem type="a">InterConnection</_hsubsystem>
+					<_hname type="a">Driver</_hname>
+					<_hid type="a">GUID b5e3c8a7-45e6-4812-b7db-16c188fd03d1</_hid>
+				</INObjectHandle>
+			</_dependsOn>
+			<_dependent type="r">
+				<INObjectHandle type="e">
+					<_hm2Class type="a">ICodeGenConfigInfo</_hm2Class>
+					<_hid type="a">GUID bc0fe0ec-c818-4a7b-93b7-6d750260076b</_hid>
+				</INObjectHandle>
+			</_dependent>
+		</IDependency>
+		<IDependency type="e">
+			<_id type="a">GUID 88168e3a-b1b6-430d-bf4e-336647b149fb</_id>
+			<_myState type="a">2048</_myState>
+			<_rmmServerID type="a">-1</_rmmServerID>
+			<_name type="a">Monitor</_name>
+			<_modifiedTimeWeak type="a">10.31.2022::12:50:16</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.31.2022::13:20:56</_modifiedTime>
+			<_dependsOn type="r">
+				<INObjectHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hfilename type="a">.\InterConnection.sbsx</_hfilename>
+					<_hsubsystem type="a">InterConnection</_hsubsystem>
+					<_hname type="a">Monitor</_hname>
+					<_hid type="a">GUID 36e1523e-2db3-4d1c-883d-5bb6315c6241</_hid>
+				</INObjectHandle>
+			</_dependsOn>
+			<_dependent type="r">
+				<INObjectHandle type="e">
+					<_hm2Class type="a">ICodeGenConfigInfo</_hm2Class>
+					<_hid type="a">GUID bc0fe0ec-c818-4a7b-93b7-6d750260076b</_hid>
+				</INObjectHandle>
+			</_dependent>
+		</IDependency>
+		<IFolder type="e">
+			<_id type="a">GUID 63740807-85ea-44fc-b775-ca86bb61385f</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">-1</_rmmServerID>
+			<_name type="a">Simulink</_name>
+			<_modifiedTimeWeak type="a">10.31.2022::13:20:56</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.31.2022::13:20:56</_modifiedTime>
+			<Elements type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Elements>
+			<Files type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Files>
+		</IFolder>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

@@ -1,0 +1,6 @@
+ADTSRequirements,The system must drive the truck autonomuously from its parking spot to a docking bay and back to the spot.
+,000
+CommunicationRegPkg,This is communication Req Pkg spec....,100
+GeneralReqPkg,This is general req pkg spec....,200
+PathGen&Control,This is path generation and control spec...,300
+requirement_20,This is the req with id 1000,1000

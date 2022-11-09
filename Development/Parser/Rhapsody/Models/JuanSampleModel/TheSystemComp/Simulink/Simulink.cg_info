@@ -1,0 +1,19 @@
+I-Logix-RPY-Archive version 8.15.0 * 202002261110
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 0;
+}
+- m_saveUnitAndOwnerSaveUnit = { IRPYRawContainer 
+	- size = 1;
+	- value = "GUID 3c530a05-ab16-40b9-b9a2-5056b2c10b6a" "GUID ae64dc06-6b2f-4a3e-9aa6-e2b7b8ee1e5e"
+	
+}
+- size = 1;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = ".\\..\\..\\JuanSampleModel_rpy\\TheSystemComp.cmpx";
+	- _name = "TheSystemComp\\Simulink";
+	- _id = GUID bc0fe0ec-c818-4a7b-93b7-6d750260076b;
+}
+- genTime = 11.3.2022::13:19:23;
+

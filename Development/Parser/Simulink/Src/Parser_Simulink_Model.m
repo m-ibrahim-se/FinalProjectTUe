@@ -32,13 +32,14 @@ function [file_count] = Parse_Simulink_Model()
             
             %%%%%%%% construct Simulink %%%%%%%%
             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			modelInfo = '';
             modelInfo.id = replace(modelId, newline,' ');
             modelInfo.type = 'node';
             modelInfo.labels = {'Model'};
             modelInfo.properties.name = replace(replace(get_param(modelNameOnly, 'Name'), newline,' '),'"',"'");
             modelInfo.properties.type = replace(replace(get_param(modelNameOnly, 'Type'), newline,' '),'"',"'");
             modelInfo.properties.extension = modelType;
-            modelInfo.properties.created_date = get_param(modelNameOnly, 'Created');
+            modelInfo.properties.createdDate = get_param(modelNameOnly, 'Created');
             modelInfo.properties.creator = replace(get_param(modelNameOnly, 'Creator'), newline,' ');
             modelInfo.properties.modifiedBy = replace(get_param(modelNameOnly, 'ModifiedBy'), newline,' ');
             modelInfo.properties.modifiedDate = replace(get_param(modelNameOnly, 'ModifiedDate'), newline,' ');
@@ -46,7 +47,7 @@ function [file_count] = Parse_Simulink_Model()
             modelInfo.properties.description = replace(replace(get_param(modelNameOnly, 'Description'), newline,' '),'"',"'");
             modelInfo.properties.startTime = get_param(modelNameOnly, 'StartTime');
             modelInfo.properties.stopTime = get_param(modelNameOnly, 'StopTime');
-            modelInfo.properties.version = string(get_param(modelNameOnly, 'Version'));
+            %modelInfo.properties.version = string(get_param(modelNameOnly, 'Version'));
 
             jsonData = jsonData + jsonencode(modelInfo) + newline;
             %disp(['Added node for ' modelNameOnly]);
@@ -68,7 +69,8 @@ function [file_count] = Parse_Simulink_Model()
                 numberOfOutputPort = size(portHandles.Outport,2);
                 blockId = strcat(parentBlock,"/",blockName);
 
-                % prepare and insert block/subsystem block node information
+                % prepare and insert block/subsystem block node information   
+				elementInfo = '';
                 elementInfo.id = blockId;
                 elementInfo.type = 'node';
                 if strcmp(blockType,'SubSystem')
@@ -80,7 +82,14 @@ function [file_count] = Parse_Simulink_Model()
                 end
 
                 elementInfo.properties.name = blockName;
-                elementInfo.properties.type = blockType;
+                elementInfo.properties.type = blockType; 
+                if (strcmp(blockType,'Inport') || strcmp(blockType,'Outport')) 
+                    % for inport and outport type block the value will be inport and outport respectively. So we keep this block as ConnectivityBlock
+                    elementInfo.properties.typeDescription = 'ConnectivityBlock'; 
+                else
+                     elementInfo.properties.typeDescription = ''; 
+                end
+                
                 if strcmp(blockType,'ModelReference')
                     elementInfo.properties.referenceModelName = replace(get(get_block(i),'ModelName'), newline,' ');                    
                 end
@@ -98,6 +107,7 @@ function [file_count] = Parse_Simulink_Model()
 
                 % prepare and insert block/subsystem block relationship information
                 % with immediate parent node
+				relationshipInfo = '';
                 relationshipInfo.id = "";
                 relationshipInfo.type = 'relationship';
                 relationshipInfo.label = 'CONTAINS';
@@ -110,6 +120,7 @@ function [file_count] = Parse_Simulink_Model()
                 %Create the model reference relationship 
                 if strcmp(blockType,'ModelReference')
                     referenceModelId = replace(get(get_block(i),'ModelName'), newline,' ');  
+					referenceRelationshipInfo = '';
                     referenceRelationshipInfo.id = "";
                     referenceRelationshipInfo.type = 'relationship';
                     referenceRelationshipInfo.label = 'HAS_REFERENCE_OF';
@@ -127,6 +138,7 @@ function [file_count] = Parse_Simulink_Model()
                     if strcmp(parent_Block_BlockType,'SubSystem')
                         inoutportBlockPortNumber = get(get_block(i), 'Port'); % this will be same as subsystem block's connected port number
                         inoutportBlockId = strcat(parentBlock,"/",blockType,num2str(inoutportBlockPortNumber));  
+						inoutportBlockRelationshipInfo = '';
                         inoutportBlockRelationshipInfo.id = "";
                         inoutportBlockRelationshipInfo.type = 'relationship';
                         inoutportBlockRelationshipInfo.label = 'IS_CONNECTED_WITH';
@@ -143,8 +155,10 @@ function [file_count] = Parse_Simulink_Model()
             % compile the model - gcs returns the path name of the current system (model)
             try
                 eval([gcs,'([],[],[],''compile'');']);
-            catch 
-                disp(strcat(modelNameOnly, ' model compilation ignored'));
+            catch e %e is an MException struct
+                fprintf(1,'The identifier was: %s',e.identifier);
+                fprintf(1,'\n There was an error in model compile! The message was: %s',e.message);
+                %disp(strcat(modelNameOnly, ' model compilation ignored'));
             end
             %%%% input or output port info
             get_port = find_system(loadedModel,'FindAll','on','FollowLinks','on','type','port');
@@ -161,6 +175,7 @@ function [file_count] = Parse_Simulink_Model()
                 parentBlockId = replace(portParent, newline,' ');
 
                 % prepare and insert port node information
+				portElementInfo = '';
                 portElementInfo.id = portBlockId;
                 portElementInfo.type = 'node';
                 portElementInfo.labels = {'Port'};
@@ -177,7 +192,8 @@ function [file_count] = Parse_Simulink_Model()
                 %disp(strcat("Added node of ",parentBlockId,"--->",portBlockName));
 
                 % Prepare and insert Port Node Relationship with Parent node
-                if strcmp(portType,'inport')        
+                if strcmp(portType,'inport')       
+					inportRelationshipInfo = '';
                     inportRelationshipInfo.id = "";
                     inportRelationshipInfo.type = 'relationship';
                     inportRelationshipInfo.label = 'HAS_PORT'; %%% At this moment inport and outport both are same
@@ -186,7 +202,8 @@ function [file_count] = Parse_Simulink_Model()
                     inportRelationshipInfo.end.id = portBlockId;
                     jsonData = jsonData + jsonencode(inportRelationshipInfo) + newline;
                     %disp(strcat("Added relationship of ",parentBlockId,"--->",portBlockName));
-                elseif strcmp(portType,'outport')        
+                elseif strcmp(portType,'outport')   
+					outportRelationshipInfo = '';
                     outportRelationshipInfo.id = "";
                     outportRelationshipInfo.type = 'relationship';
                     outportRelationshipInfo.label = 'HAS_PORT';
@@ -200,8 +217,10 @@ function [file_count] = Parse_Simulink_Model()
             % terminate the compilation
             try
                 eval([gcs,'([],[],[],''term'')']);
-            catch 
-                disp(strcat(modelNameOnly, ' model Termination ignored'));
+            catch e %e is an MException struct
+                fprintf(1,'\n The identifier was:%s',e.identifier);
+                fprintf(1,'\n There was an error in model termination! The message was: %s',e.message); 
+                %disp(strcat(modelNameOnly, ' model Termination ignored'));
             end
             
             %%% Prepare Signal or Line information as edge
@@ -236,6 +255,7 @@ function [file_count] = Parse_Simulink_Model()
                     dstPortPathId = replace(strcat(get(destination_block_handle, 'Parent'),"/",dst_block_name,"/",dstPortParent), newline,' ');
 
                     % Prepare and insert Signal/Line relationship with Port nodes
+					lineRelationshipInfo = '';
                     lineRelationshipInfo.id = "";
                     lineRelationshipInfo.type = 'relationship';
                     lineRelationshipInfo.label = 'SEND_DATA_TO';
@@ -252,6 +272,7 @@ function [file_count] = Parse_Simulink_Model()
             fid=fopen(jsonDataFilePath,'w');
             fprintf(fid,jsonData);
             fclose('all');  
+            disp('')
             disp(strcat(dataFileName,'.json',' file created successfully'));
             created_file_count =  created_file_count + 1;
         end

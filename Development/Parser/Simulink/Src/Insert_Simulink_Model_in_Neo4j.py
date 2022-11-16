@@ -19,7 +19,8 @@ def move_files(model_type=None):
     parsed_data_file_path = os.path.join(root_dir, "ParsedDataFiles")
 
     # Copy files
-    source_folder = parsed_data_file_path
+    #source_folder = parsed_data_file_path
+    source_folder = parsedDataPath
     destination_folder = os.path.join(neo4jfileimportpath, simulinkfolder)
 
     # remove all files from destination path
@@ -96,8 +97,8 @@ def execute_query(query):
 if __name__ == '__main__':
     # Generate data file(s)
     isDeleteGraphData = True
-    file_count = rSimModel.main_function()
-    if file_count > 20:
+    file_count = rSimModel.main_function(modelSourcePath, parsedDataPath)
+    if file_count > 0:
         print(file_count, " files generated to load")
         move_files('Simulink')
         if isDeleteGraphData:

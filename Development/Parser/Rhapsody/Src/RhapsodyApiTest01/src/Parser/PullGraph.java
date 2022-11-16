@@ -70,7 +70,7 @@ public class PullGraph {
 		// app.openProject("..\\JUAN\\Juan_V1.rpy");
 		app.openProject(
 				//"C:\\Users\\20204920\\OneDrive - TU Eindhoven\\PDEng\\Projects\\Final_Project\\TUeProject\\Development\\Parser\\Rhapsody\\Models\\DT_Truck\\Standalone_IBM_Rhapsody\\Project.rpyx");
-				"C:\\Users\\20204920\\OneDrive - TU Eindhoven\\PDEng\\Projects\\Final_Project\\TUeProject\\Development\\Parser\\Rhapsody\\Models\\JuanSampleModel\\JuanSampleModel.rpyx");
+				"C:\\Users\\20204920\\OneDrive - TU Eindhoven\\PDEng\\Projects\\Final_Project\\TUeProject\\Development\\Parser\\Rhapsody\\Models\\JSampleModel\\JSampleModel.rpyx");
 		prj = app.activeProject();
 	}
 
@@ -260,7 +260,7 @@ public class PullGraph {
 			reqDiagElement.put("type", "node");
 
 			JSONArray labelsArray = new JSONArray();
-			labelsArray.add("UseCaseDiagram");
+			labelsArray.add("Diagram"); //UseCaseDiagram
 			reqDiagElement.put("labels", labelsArray);
 
 			JSONObject reqDiagElementProperties = new JSONObject();
@@ -340,7 +340,7 @@ public class PullGraph {
 					reqElement.put("type", "node");
 
 					JSONArray reqElementlabelsArray = new JSONArray();
-					reqElementlabelsArray.add(reqElementMetaClass); // Actor, Use Case
+					reqElementlabelsArray.add("Element"); // Actor, Use Case
 					reqElement.put("labels", reqElementlabelsArray);
 
 					JSONObject reqElementProperties = new JSONObject();
@@ -357,7 +357,7 @@ public class PullGraph {
 					JSONObject reqRelation = new JSONObject();
 					reqRelation.put("id", "");
 					reqRelation.put("type", "relationship");
-					reqRelation.put("label", "CONTAINS");
+					reqRelation.put("label", "CONTAINS_ELEMENT"); //CONTAINS_USECASE, CONTAINS_ACTOR
 
 					JSONObject reqRelationProperties = new JSONObject();
 					reqRelationProperties.put("type", reqElementMetaClass);// Actor, Use Case
@@ -383,7 +383,7 @@ public class PullGraph {
 					dependencyRel.put("id", "");
 					dependencyRel.put("type", "relationship");
 					// dependencyRel.put("label", "IS_PART_OF");
-					String labelName = "HAS_" + relation.getRelationType().toUpperCase() + "_WITH";
+					String labelName = "HAS_ASSOCIATION_WITH"; //"HAS_" + relation.getRelationType().toUpperCase() + "_WITH";
 					dependencyRel.put("label", labelName);
 
 					JSONObject dependencyRelProperties = new JSONObject();
@@ -412,7 +412,7 @@ public class PullGraph {
 					JSONObject dependencyRel = new JSONObject();
 					dependencyRel.put("id", "");
 					dependencyRel.put("type", "relationship");
-					dependencyRel.put("label", "IS_CONNECTED_WITH");
+					dependencyRel.put("label", "HAS_ASSOCIATION_WITH"); //"IS_CONNECTED_WITH_USECASE"); //IS_CONNECTED_WITH
 
 					JSONObject dependencyRelProperties = new JSONObject();
 					dependencyRelProperties.put("type", elementDependency.getUserDefinedMetaClass());
@@ -543,7 +543,7 @@ public class PullGraph {
 			reqDiagElement.put("type", "node");
 
 			JSONArray labelsArray = new JSONArray();
-			labelsArray.add("StateMachineDiagram");
+			labelsArray.add("Diagram"); //StateMachineDiagram
 			reqDiagElement.put("labels", labelsArray);
 
 			JSONObject reqDiagElementProperties = new JSONObject();
@@ -569,7 +569,7 @@ public class PullGraph {
 				reqRelation.put("label", "CONTAINS_DIAGRAM");
 
 				JSONObject reqRelationProperties = new JSONObject();
-				reqRelationProperties.put("type", "state machine");
+				reqRelationProperties.put("type", "State Machine");
 
 				JSONObject reqRelationStart = new JSONObject();
 				reqRelationStart.put("id", ownerIdentifier); // Source, class or block
@@ -643,7 +643,7 @@ public class PullGraph {
 					reqElement.put("type", "node");
 
 					JSONArray reqElementlabelsArray = new JSONArray();
-					reqElementlabelsArray.add("Block");
+					reqElementlabelsArray.add("Element"); // Block /reqElementMetaClass
 					reqElement.put("labels", reqElementlabelsArray);
 
 					JSONObject reqElementProperties = new JSONObject();
@@ -664,7 +664,7 @@ public class PullGraph {
 					JSONObject reqRelation = new JSONObject();
 					reqRelation.put("id", "");
 					reqRelation.put("type", "relationship");
-					reqRelation.put("label", "CONTAINS");
+					reqRelation.put("label", "CONTAINS_ELEMENT"); // CONTAINS_ELEMENT /CONTAINS_STATECHART_ELEMENT
 
 					JSONObject reqRelationProperties = new JSONObject();
 					reqRelationProperties.put("type", reqElementMetaClass); // State
@@ -703,7 +703,7 @@ public class PullGraph {
 					reqElement.put("type", "node");
 
 					JSONArray reqElementlabelsArray = new JSONArray();
-					reqElementlabelsArray.add("Block");
+					reqElementlabelsArray.add("Element"); // Block /State
 					reqElement.put("labels", reqElementlabelsArray);
 
 					JSONObject reqElementProperties = new JSONObject();
@@ -724,7 +724,7 @@ public class PullGraph {
 					JSONObject reqRelation = new JSONObject();
 					reqRelation.put("id", "");
 					reqRelation.put("type", "relationship");
-					reqRelation.put("label", "CONTAINS");
+					reqRelation.put("label", "CONTAINS_ELEMENT"); // CONTAINS_ELEMENT
 
 					JSONObject reqRelationProperties = new JSONObject();
 					reqRelationProperties.put("type", reqElementMetaClass); // State
@@ -847,7 +847,7 @@ public class PullGraph {
 			reqDiagElement.put("type", "node");
 
 			JSONArray labelsArray = new JSONArray();
-			labelsArray.add("ActivityDiagram");
+			labelsArray.add("Diagram"); //ActivityDiagram
 			reqDiagElement.put("labels", labelsArray);
 
 			JSONObject reqDiagElementProperties = new JSONObject();
@@ -915,7 +915,7 @@ public class PullGraph {
 					reqElement.put("type", "node");
 
 					JSONArray reqElementlabelsArray = new JSONArray();
-					reqElementlabelsArray.add("Block");
+					reqElementlabelsArray.add("Element"); //Block /reqElementMetaClass
 					reqElement.put("labels", reqElementlabelsArray);
 
 					JSONObject reqElementProperties = new JSONObject();
@@ -938,7 +938,7 @@ public class PullGraph {
 					JSONObject reqRelation = new JSONObject();
 					reqRelation.put("id", "");
 					reqRelation.put("type", "relationship");
-					reqRelation.put("label", "CONTAINS");
+					reqRelation.put("label", "CONTAINS_ELEMENT"); // CONTAIN_ELEMENT /CONTAINS_ACTIVITY_ELEMENT
 
 					JSONObject reqRelationProperties = new JSONObject();
 					reqRelationProperties.put("type", reqElementMetaClass); // State
@@ -989,7 +989,7 @@ public class PullGraph {
 					reqElement.put("type", "node");
 
 					JSONArray reqElementlabelsArray = new JSONArray();
-					reqElementlabelsArray.add("Block");
+					reqElementlabelsArray.add("Element"); // Block /reqElementMetaClass
 					reqElement.put("labels", reqElementlabelsArray);
 
 					JSONObject reqElementProperties = new JSONObject();
@@ -1010,7 +1010,7 @@ public class PullGraph {
 					JSONObject reqRelation = new JSONObject();
 					reqRelation.put("id", "");
 					reqRelation.put("type", "relationship");
-					reqRelation.put("label", "CONTAINS");
+					reqRelation.put("label", "CONTAINS_ELEMENT"); // CONTAIN_ELEMENT /CONTAINS_ACTIVITY_ELEMENT
 
 					JSONObject reqRelationProperties = new JSONObject();
 					reqRelationProperties.put("type", reqElementMetaClass); // State
@@ -1048,7 +1048,7 @@ public class PullGraph {
 					reqElement.put("type", "node");
 
 					JSONArray reqElementlabelsArray = new JSONArray();
-					reqElementlabelsArray.add(reqElementMetaClass); // Pin
+					reqElementlabelsArray.add("Pin"); // Pin /reqElementMetaClass
 					reqElement.put("labels", reqElementlabelsArray);
 
 					JSONObject reqElementProperties = new JSONObject();
@@ -1071,7 +1071,7 @@ public class PullGraph {
 					JSONObject reqRelation = new JSONObject();
 					reqRelation.put("id", "");
 					reqRelation.put("type", "relationship");
-					reqRelation.put("label", "HAS");
+					reqRelation.put("label", "HAS_PIN");
 
 					JSONObject reqRelationProperties = new JSONObject();
 					reqRelationProperties.put("type", reqElementMetaClass); // Pin
@@ -1104,7 +1104,10 @@ public class PullGraph {
 						dependencyRel.put("id", "");
 						dependencyRel.put("type", "relationship");
 						// dependencyRel.put("label", "IS_PART_OF");
-						String labelName = "HAS_TRANSITION_WITH";
+						String labelName = "SEND_CONTROLDATA_TO";//HAS_TRANSITION_WITH
+						if(transition.getUserDefinedMetaClass().equalsIgnoreCase("ObjectFlow")) {
+							labelName = "SEND_OBJECTDATA_TO";
+						}
 						dependencyRel.put("label", labelName);
 
 						JSONObject dependencyRelProperties = new JSONObject();
@@ -1766,7 +1769,7 @@ public class PullGraph {
 				reqDiagElement.put("type", "node");
 
 				JSONArray labelsArray = new JSONArray();
-				labelsArray.add("RequirementDiagram"); // changed from Diagram to RequirementDiagram
+				labelsArray.add("Diagram"); // changed from Diagram to RequirementDiagram
 				reqDiagElement.put("labels", labelsArray);
 
 				JSONObject reqDiagElementProperties = new JSONObject();
@@ -1835,7 +1838,7 @@ public class PullGraph {
 						reqElement.put("type", "node");
 
 						JSONArray reqElementlabelsArray = new JSONArray();
-						reqElementlabelsArray.add("Requirement");
+						reqElementlabelsArray.add("Element");
 						reqElement.put("labels", reqElementlabelsArray);
 
 						JSONObject reqElementProperties = new JSONObject();
@@ -1856,7 +1859,7 @@ public class PullGraph {
 						JSONObject reqRelation = new JSONObject();
 						reqRelation.put("id", "");
 						reqRelation.put("type", "relationship");
-						reqRelation.put("label", "CONTAINS_REQ");
+						reqRelation.put("label", "CONTAINS_ELEMENT"); //CONTAINS_REQUIREMENT /HAS_ASSOCIATION_WITH
 
 						JSONObject reqRelationProperties = new JSONObject();
 						reqRelationProperties.put("type", reqElementUserDefinedMetaClass);
@@ -1889,7 +1892,7 @@ public class PullGraph {
 							JSONObject dependencyRel = new JSONObject();
 							dependencyRel.put("id", "");
 							dependencyRel.put("type", "relationship");
-							dependencyRel.put("label", "IS_CONNECTED_WITH");
+							dependencyRel.put("label", "HAS_ASSOCIATION_WITH"); //IS_CONNECTED_WITH
 
 							JSONObject dependencyRelProperties = new JSONObject();
 							dependencyRelProperties.put("type", elementDependency.getUserDefinedMetaClass());
@@ -1998,7 +2001,7 @@ public class PullGraph {
 						dependencyRel.put("id", "");
 						dependencyRel.put("type", "relationship");
 						// dependencyRel.put("label", "IS_PART_OF");
-						dependencyRel.put("label", "CONTAINS");
+						dependencyRel.put("label", "CONTAINS_PACKAGE"); //CONTAINS
 
 						JSONObject dependencyRelProperties = new JSONObject();
 						dependencyRelProperties.put("type", "package");
@@ -2051,7 +2054,7 @@ public class PullGraph {
 								nestedDependencyRel.put("id", "");
 								nestedDependencyRel.put("type", "relationship");
 								// nestedDependencyRel.put("label", "IS_PART_OF");
-								nestedDependencyRel.put("label", "CONTAINS");
+								nestedDependencyRel.put("label", "CONTAINS_PACKAGE"); //CONTAINS
 
 								JSONObject nestedDependencyRelProperties = new JSONObject();
 								nestedDependencyRelProperties.put("type", "package");
@@ -2138,7 +2141,7 @@ public class PullGraph {
 			reqDiagElement.put("type", "node");
 
 			JSONArray labelsArray = new JSONArray();
-			labelsArray.add("BDDDiagram");
+			labelsArray.add("Diagram"); //BDDDiagram
 			reqDiagElement.put("labels", labelsArray);
 
 			JSONObject reqDiagElementProperties = new JSONObject();
@@ -2181,9 +2184,9 @@ public class PullGraph {
 			IRPCollection collection = mod.getElementsInDiagram();
 			for (int k = 1; k <= collection.getCount(); k++) {
 				IRPModelElement eachModelElement = (IRPModelElement) collection.getItem(k);
-						System.out.println("Model Element ---> MetaClass: "+eachModelElement.getMetaClass()+"<> Name: "+ eachModelElement.getName() +"<> FullPath: "+ eachModelElement.getFullPathName() + 
-								"<> Owner: "+ eachModelElement.getOwner().getName() + " <> OwnerFullPath: "+ eachModelElement.getOwner().getFullPathName() + 
-								"<>UserDefinedMetaClass: "+eachModelElement.getUserDefinedMetaClass());
+//						System.out.println("Model Element ---> MetaClass: "+eachModelElement.getMetaClass()+"<> Name: "+ eachModelElement.getName() +"<> FullPath: "+ eachModelElement.getFullPathName() + 
+//								"<> Owner: "+ eachModelElement.getOwner().getName() + " <> OwnerFullPath: "+ eachModelElement.getOwner().getFullPathName() + 
+//								"<>UserDefinedMetaClass: "+eachModelElement.getUserDefinedMetaClass());
 				// System.out.println("ReqID: "+eachModelElement.getRequirementID()+"<> Spec: "+
 				// eachModelElement.getSpecification()+"<> Desc: "+
 				// eachModelElement.getDescription());
@@ -2210,14 +2213,13 @@ public class PullGraph {
 					IRPCollection stereotypes = classItem.getStereotypes();
 					for (int s = 1; s < stereotypes.getCount() + 1; s++) {
 						IRPStereotype stereo = (IRPStereotype) stereotypes.getItem(s);
-						// Find block types except general Block type
-						/*
+						// Find block types except general Block type						
 						if(!stereo.getName().equalsIgnoreCase("Block")) {
 							reqElementlabelsArray.add(stereo.getName());
 							System.out.println("---> StereoType: "+stereo.getName());
 						}
-						*/
-						reqElementlabelsArray.add(stereo.getName()); // all Block types
+						
+						//reqElementlabelsArray.add(stereo.getName()); // all Block types
 					}					
 //					JSONArray reqElementlabelsArray = new JSONArray();
 					if(reqElementlabelsArray.isEmpty()) {
@@ -2243,7 +2245,7 @@ public class PullGraph {
 					JSONObject reqRelation = new JSONObject();
 					reqRelation.put("id", "");
 					reqRelation.put("type", "relationship");
-					reqRelation.put("label", "CONTAINS_BLOCK");
+					reqRelation.put("label", "CONTAINS_BLOCK"); // CONTAINS_BLOCK / CONTAINS_BDD_ELEMENT
 
 					JSONObject reqRelationProperties = new JSONObject();
 					reqRelationProperties.put("type", reqElementUserDefinedMetaClass);
@@ -2274,10 +2276,10 @@ public class PullGraph {
 							JSONObject refRelation = new JSONObject();
 							refRelation.put("id", "");
 							refRelation.put("type", "relationship");
-							refRelation.put("label", "CONTAINS_SIMULINK_MODEL");
+							refRelation.put("label", "HAS_REFERENCE_OF"); //CONTAINS_SIMULINK_MODEL
 
 							JSONObject refRelationProperties = new JSONObject();
-							refRelationProperties.put("type", "Simulink Reference");
+							refRelationProperties.put("type", "Simulink Model Reference"); //reference
 
 							JSONObject refRelationStart = new JSONObject();
 							refRelationStart.put("id", reqElementIdentifier); // Source, Block							
@@ -2655,7 +2657,7 @@ public class PullGraph {
 	}
 
 	/*
-	 * Prints all the elements of the state chart
+	 * Prints all the elements of the sequence diagram
 	 */
 	public void printElementsSeqDiagram(IRPSequenceDiagram mod) {
 		
@@ -2685,7 +2687,7 @@ public class PullGraph {
 		reqDiagElement.put("type", "node");
 
 		JSONArray labelsArray = new JSONArray();
-		labelsArray.add("SequenceDiagram");
+		labelsArray.add("Diagram"); //SequenceDiagram
 		reqDiagElement.put("labels", labelsArray);
 
 		JSONObject reqDiagElementProperties = new JSONObject();
@@ -2761,12 +2763,12 @@ public class PullGraph {
 				reqElement.put("type", "node"); //Lifeline
 
 				JSONArray reqElementlabelsArray = new JSONArray();
-				reqElementlabelsArray.add("Block");
+				reqElementlabelsArray.add("Element"); //Lifeline /reqElementUserDefinedMetaClass
 				reqElement.put("labels", reqElementlabelsArray);
 
 				JSONObject reqElementProperties = new JSONObject();
 				reqElementProperties.put("name", reqElementName);
-				reqElementProperties.put("type", reqElementUserDefinedMetaClass);
+				reqElementProperties.put("type", reqElementUserDefinedMetaClass);//reqElementUserDefinedMetaClass
 				reqElementProperties.put("genericType", reqElementMetaClass);
 				// reqElementProperties.put("description", desccription);
 //								reqElementProperties.put("requirementId", req.getRequirementID());// requirementId
@@ -2782,10 +2784,10 @@ public class PullGraph {
 				JSONObject reqRelation = new JSONObject();
 				reqRelation.put("id", "");
 				reqRelation.put("type", "relationship");
-				reqRelation.put("label", "CONTAINS");
+				reqRelation.put("label", "CONTAINS_ELEMENT"); // CONTAINS_ELEMENT /CONTAINS_SEQUENCE_ELEMENT
 
 				JSONObject reqRelationProperties = new JSONObject();
-				reqRelationProperties.put("type", reqElementMetaClass); // State
+				reqRelationProperties.put("type", reqElementUserDefinedMetaClass); // Lifeline
 
 				JSONObject reqRelationStart = new JSONObject();
 				reqRelationStart.put("id", elementIdentifier); // Source
@@ -2852,7 +2854,7 @@ public class PullGraph {
 				reqRelationProperties.put("name", reqElementName); // Message name 
 				reqRelationProperties.put("type", reqElementMetaClass);
 				reqRelationProperties.put("messageType", messageType);
-				reqRelationProperties.put("sequenceNumber", sequenceNumber);
+				reqRelationProperties.put("sequenceNumber", sequenceNumber.replace(".", ""));
 
 				JSONObject reqRelationStart = new JSONObject();
 				reqRelationStart.put("id", sourceIdentifier); // Source

@@ -1,0 +1,6 @@
+neo4juri      = 'bolt://localhost:7687'
+neo4jusername = 'neo4j'
+neo4jpassword = 'mipneo4jdb'
+neo4jdbname = 'simulink-and-rhap-db'
+neo4jfileimportpath = r'C:\Users\20204920\.Neo4jDesktop\relate-data\dbmss\dbms-79f99d08-0bb0-48c2-8aab-5fc4df4904a5\import'
+rhapsodyfolder = r'Rhapsody\ParsedDataFiles'

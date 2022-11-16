@@ -1,11 +1,23 @@
-function [file_count] = Parse_Simulink_Model()
+function [file_count] = Parse_Simulink_Model(modelSourcePath, parsedDataPath)
     fullPath = mfilename('fullpath');
     onlyFileName = mfilename;
     currentFolder = erase(fullPath,onlyFileName);
     rootDir = erase(currentFolder,'Src\');
-
-    parsedDataFilePath = fullfile(rootDir,'ParsedDataFiles\');
-    modelFilesPath = fullfile(rootDir,'Models\');
+    
+    modelFilesPath = modelSourcePath;
+    if modelFilesPath == ""        
+        modelFilesPath = fullfile(rootDir,'Models\');
+    else
+        modelFilesPath = fullfile(modelFilesPath,'\');
+    end
+    
+    parsedDataFilePath = parsedDataPath;
+    if parsedDataFilePath == ""
+        parsedDataFilePath = fullfile(rootDir,'ParsedDataFiles\');
+    else 
+        parsedDataFilePath = fullfile(parsedDataFilePath,'\');
+    end
+    
     %mdlFileList = dir(fullfile(modelFilesPath,'**\*.slx'));
     allList = dir(fullfile(modelFilesPath,'**\')); %% consider all subfolder and files
     allModelFiles = allList(~[allList.isdir]);
@@ -30,6 +42,16 @@ function [file_count] = Parse_Simulink_Model()
 
             loadedModel = load_system(fileFullPath); 
             
+            % compile the model - gcs returns the path name of the current system (model)
+            try
+%               modelNameOnly([], [], [], 'compile');
+                eval([gcs,'([],[],[],''compile'')']);
+            catch e %e is an MException struct
+                fprintf(1,'The identifier was: %s',e.identifier);
+                fprintf(1,'\n There was an error in model compile! The message was: %s \n',e.message);
+                %disp(strcat(modelNameOnly, ' model compilation ignored'));
+            end
+            
             %%%%%%%% construct Simulink %%%%%%%%
             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 			modelInfo = '';
@@ -53,10 +75,11 @@ function [file_count] = Parse_Simulink_Model()
             %disp(['Added node for ' modelNameOnly]);
 
             %%%%%%%% List of Blocks %%%%%%%%
-            
+                        
             get_block = find_system(loadedModel,'FindAll','on','FollowLinks','on','type','block');
             for i= 1:size(get_block, 1) %for each block in the list do    
-                %Block info    
+                %Block info   
+                %blockInfo = get(get_block(i));
                 blockName = replace(replace(get(get_block(i), 'Name'), newline,' '),'"',"'");
                 blockType = replace(get(get_block(i), 'BlockType'), newline,' ');
                 parentBlock = replace(get(get_block(i), 'Parent'), newline,' ');
@@ -76,7 +99,7 @@ function [file_count] = Parse_Simulink_Model()
                 if strcmp(blockType,'SubSystem')
                     elementInfo.labels = {'SubSystem'};        
                 elseif strcmp(blockType,'ModelReference')
-                    elementInfo.labels = {'ReferenceModel'};
+                    elementInfo.labels = {'ModelReference'}; %ModelReference instead of ReferenceModel
                 else
                     elementInfo.labels = {'Block'};
                 end
@@ -91,7 +114,7 @@ function [file_count] = Parse_Simulink_Model()
                 end
                 
                 if strcmp(blockType,'ModelReference')
-                    elementInfo.properties.referenceModelName = replace(get(get_block(i),'ModelName'), newline,' ');                    
+                    elementInfo.properties.modelReferenceName = replace(get(get_block(i),'ModelName'), newline,' ');                    
                 end
                 
                 elementInfo.properties.description = blockDescription;
@@ -128,7 +151,53 @@ function [file_count] = Parse_Simulink_Model()
                     referenceRelationshipInfo.start.id = blockId; % current block as source node
                     referenceRelationshipInfo.end.id = referenceModelId; % Actual model as destination node
                     jsonData = jsonData + jsonencode(referenceRelationshipInfo) + newline;
-                    %disp(strcat("Added model reference edge for  ", blockId, "-->", referenceModelId));
+
+                    modelReferenceFileName = "";
+                    modelReferenceFileName = replace(get(get_block(i),'ModelFile'), newline,' '); 
+                    if (modelReferenceFileName == "")
+                        modelReferenceFileName = replace(get(get_block(i),'ModelNameDialog'), newline,' '); 
+                    end
+                    modelRefFileFullPath = "";
+                                        
+                    for eachFiles= 1:size(allModelFiles, 1)
+                        eachFileName = allModelFiles(eachFiles).name;
+                        if strcmp(eachFileName,modelReferenceFileName)                            
+                            eachFileFolderName = allModelFiles(eachFiles).folder;
+                            modelRefFileFullPath = fullfile(eachFileFolderName,eachFileName);
+                            break;
+                        end
+                    end
+                                        
+                    if modelRefFileFullPath ~= ""
+                        %sys = gcb; % for subsystems
+                        %sys_ModelRef = get_param(blockId, 'ModelName'); % for model references
+                        sys_ModelRef = load_system(modelRefFileFullPath);
+                        % find all block in the system of the given type. Ex. "Inport", "Outport"
+                        portTypes = ["Inport", "Outport"];
+                        for p = 1: length(portTypes)
+                            %get_AllPorts = Simulink.findBlocksOfType(sys_ModelRef, portTypes(p));
+                            get_AllPorts = find_system(sys_ModelRef,'FindAll','on','FollowLinks','on','blocktype',portTypes(p));
+%                             
+                            % loop through all blocks found
+                            for idx = 1:length(get_AllPorts)
+                                portNumber = get_param(get_AllPorts(idx), 'Port'); % get the port number                        
+                                portType = portTypes(p); % get the port type
+                                portBlockName = get_param(get_AllPorts(idx), 'PortName'); % get the port name
+
+                                portRelationshipInfo = '';
+                                portRelationshipInfo.id = "";
+                                portRelationshipInfo.type = 'relationship';
+                                portRelationshipInfo.label = 'IS_CONNECTED_WITH';
+                                portRelationshipInfo.properties.type = "model reference"; %% default properties now
+
+                                portBlockNameGenerated = replace(strcat(regexprep(portType,'(\<\w)', '${upper($1)}'),"",num2str(portNumber)), newline,' ');
+                                portRelationshipInfo.start.id = replace(strcat(blockId,"/",portBlockNameGenerated), newline,' '); % current reference block's port block id as source node
+
+                                portRelationshipInfo.end.id = replace(strcat(referenceModelId,"/",portBlockName), newline,' '); % Model Ref Port Block ID as destination
+                                jsonData = jsonData + jsonencode(portRelationshipInfo) + newline;
+                            end
+                        end                        
+                    end
                 elseif (strcmp(blockType,'Inport') || strcmp(blockType,'Outport')) 
                     try
                         parent_Block_BlockType = get_param(parentBlock, 'BlockType');
@@ -153,18 +222,18 @@ function [file_count] = Parse_Simulink_Model()
             end           
             
             % compile the model - gcs returns the path name of the current system (model)
-            try
-                eval([gcs,'([],[],[],''compile'');']);
-            catch e %e is an MException struct
-                fprintf(1,'The identifier was: %s',e.identifier);
-                fprintf(1,'\n There was an error in model compile! The message was: %s',e.message);
-                %disp(strcat(modelNameOnly, ' model compilation ignored'));
-            end
+%             try
+%                 eval([gcs,'([],[],[],''compile'');']);
+%             catch e %e is an MException struct
+%                 fprintf(1,'The identifier was: %s',e.identifier);
+%                 fprintf(1,'\n There was an error in model compile! The message was: %s \n',e.message);
+%                 %disp(strcat(modelNameOnly, ' model compilation ignored'));
+%             end
             %%%% input or output port info
             get_port = find_system(loadedModel,'FindAll','on','FollowLinks','on','type','port');
             for i = 1:size(get_port, 1)
                 port = get_port(i);        
-                %eachPortInfo = get(get_port(i));                
+                %eachPortInfo = get(get_port(i));
                 portType= get(port, 'PortType'); 
                 portNumber= get(port, 'PortNumber');    
                 portParent= replace(get(port, 'Parent'),'//','/'); %% in mdl model I found an exceptional case with this
@@ -173,7 +242,7 @@ function [file_count] = Parse_Simulink_Model()
                 portBlockName = replace(strcat(regexprep(portType,'(\<\w)', '${upper($1)}'),"",num2str(portNumber)), newline,' ');
                 portBlockId = replace(strcat(portParent,"/",portBlockName), newline,' ');
                 parentBlockId = replace(portParent, newline,' ');
-
+                
                 % prepare and insert port node information
 				portElementInfo = '';
                 portElementInfo.id = portBlockId;
@@ -211,17 +280,17 @@ function [file_count] = Parse_Simulink_Model()
                     outportRelationshipInfo.start.id = parentBlockId;
                     outportRelationshipInfo.end.id = portBlockId;
                     jsonData = jsonData + jsonencode(outportRelationshipInfo) + newline;
-                    %disp(strcat("Added relationship of ",parentBlockId,"--->",portBlockName));      
+                    %disp(strcat("Added relationship of ",parentBlockId,"--->",portBlockName)); 
                 end   
             end                 
             % terminate the compilation
-            try
-                eval([gcs,'([],[],[],''term'')']);
-            catch e %e is an MException struct
-                fprintf(1,'\n The identifier was:%s',e.identifier);
-                fprintf(1,'\n There was an error in model termination! The message was: %s',e.message); 
-                %disp(strcat(modelNameOnly, ' model Termination ignored'));
-            end
+%             try
+%                 eval([gcs,'([],[],[],''term'')']);
+%             catch e %e is an MException struct
+%                 fprintf(1,'\n The identifier was:%s',e.identifier);
+%                 fprintf(1,'\n There was an error in model termination! The message was: %s \n',e.message); 
+%                 %disp(strcat(modelNameOnly, ' model Termination ignored'));
+%             end
             
             %%% Prepare Signal or Line information as edge
             get_line = find_system(loadedModel,'FindAll','on','FollowLinks','on','type','line');
@@ -267,6 +336,16 @@ function [file_count] = Parse_Simulink_Model()
                     %disp(strcat("Added edge info from ", sourcePortPathId, "-->", dstPortPathId));        
                 end     
             end         
+            
+            % terminate the compilation
+            try
+                %modelNameOnly([],[],[],'term');
+                eval([gcs,'([],[],[],''term'')']);
+            catch e %e is an MException struct
+                fprintf(1,'\n The identifier was:%s',e.identifier);
+                fprintf(1,'\n There was an error in model termination! The message was: %s \n',e.message); 
+                %disp(strcat(modelNameOnly, ' model Termination ignored'));
+            end
             
             %file write operation
             fid=fopen(jsonDataFilePath,'w');
